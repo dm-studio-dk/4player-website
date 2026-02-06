@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "SPFO";
+        font-weight: 700;
+        src: url("/assets/fonts/SPFO-Bold.woff2");
+        font-display: block;
+    }
+    @font-face {
+        font-family: "GT Alpina";
+        font-weight: 400;
+        src: url("/assets/fonts/GT-Alpina-Standard-Regular.woff2");
+        font-display: block;
+    }
+    @font-face {
+        font-family: "GT Alpina";
+        font-weight: 400;
+        src: url("/assets/fonts/GT-Alpina-Standard-Regular-Italic.woff2");
+        font-display: block;
+        font-style: italic;
+    }
+    body,
+    html {
+        height: 100%;
+        scrollbar-gutter: stable;
+    }
+
+    body {
+        background-color: white;
+        overflow-x: hidden;
+    }
+
+    * {
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .font-alt-1 {
+        font-feature-settings: "ss01";
+    }
+    .font-alt-2 {
+        font-feature-settings: "ss02";
+    }
+    .font-alt-3 {
+        font-feature-settings: "ss03";
+    }
+    .font-alt-4 {
+        font-feature-settings: "ss04";
+    }
+    .font-alt-5 {
+        font-feature-settings: "ss05";
+    }
+    .font-alt-6 {
+        font-feature-settings: "ss06";
+    }
+}
+
+@layer components {
+    .container {
+        @apply max-w-[1680px] px-6 lg:px-8 xl:px-16;
+    }
+
+    .page-padding {
+        @apply px-4 lg:px-10;
+    }
+
+    .module-wrapper {
+        @apply py-20 lg:py-32;
+    }
+
+    .module-divider {
+        @apply border-b border-black-almost border-opacity-10;
+    }
+
+    .site-grid {
+        @apply grid grid-cols-5 lg:grid-cols-12 gap-x-5 lg:gap-x-8;
+    }
+
+    .iframe-container {
+        @apply aspect-video;
+    }
+
+    .iframe-container iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .heading {
+        @apply mb-10 text-2xl lg:text-4xl font-display;
+    }
+
+    .theme-green {
+        --color-theme: 213 242 194;
+        --color-theme-overlay: 171 229 133;
+    }
+    .theme-dark-green {
+        --color-theme: 187 221 197;
+        --color-theme-overlay: 153 204 168;
+    }
+    .theme-blue-green {
+        --color-theme: 196 236 201;
+        --color-theme-overlay: 98 118 100;
+    }
+    .theme-yellow {
+        --color-theme: 236 250 182;
+        --color-theme-overlay: 220 232 169;
+    }
+    .theme-gray {
+        --color-theme: 242 243 238;
+        --color-theme-overlay: 220 232 169;
+    }
+
+    .line {
+        @apply bg-black-full opacity-5 w-0.5;
+    }
+
+    .dynamic-img img {
+        @apply transition-opacity duration-500 ease-out;
+    }
+
+    .list li {
+        @apply pl-2;
+    }
+
+    .list-ordered li {
+        @apply pl-2 list-decimal;
+    }
+
+    .horizontal-bg {
+        background-image: url("/assets/images/h_line.png");
+        background-repeat: repeat;
+        background-position: center;
+        opacity: 0.1;
+    }
+    @media (-webkit-min-device-pixel-ratio: 2) {
+        .horizontal-bg {
+            background-image: url("/assets/images/h_line_2x.png");
+            background-size: 64px;
+        }
+    }
+    .horizontal-bg-big {
+        background-image: url("/assets/images/h_line_big.png");
+        background-repeat: repeat;
+        background-position: center;
+    }
+    @media (-webkit-min-device-pixel-ratio: 2) {
+        .horizontal-bg-big {
+            background-image: url("/assets/images/h_line_big_2x.png");
+            background-size: 28px 180px;
+        }
+    }
+
+    .diagonal-bg {
+        background-image: url("/assets/images/d_line.png");
+        background-repeat: repeat;
+        background-position: center;
+    }
+    @media (-webkit-min-device-pixel-ratio: 2) {
+        .diagonal-bg {
+            background-image: url("/assets/images/d_line_2x.png");
+            background-size: 256px;
+        }
+    }
+    .diagonal-bg-white {
+        background-image: url("/assets/images/d_line_white.png");
+        background-repeat: repeat;
+        background-position: center;
+    }
+    @media (-webkit-min-device-pixel-ratio: 2) {
+        .diagonal-bg-white {
+            background-image: url("/assets/images/d_line_white_2x.png");
+            background-size: 256px;
+        }
+    }
+
+    .gradient-overlay {
+        @apply absolute top-0 left-0 w-full h-full bg-gradient-to-t from-[rgba(0,0,0,0.8)] via-transparent to-transparent;
+    }
+
+    .menu-with-submenu .submenu-container {
+        display: none;
+    }
+    .menu-with-submenu .submenu-container.block {
+        display: block;
+    }
+    .menu-with-submenu .submenu-container.hidden {
+        display: none;
+    }
+    @media screen and (min-width: 1024px) {
+        .menu-with-submenu:hover .submenu-container {
+            display: flex;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

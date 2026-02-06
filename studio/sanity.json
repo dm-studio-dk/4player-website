@@ -1,0 +1,41 @@
+{
+    "root": true,
+    "api": {
+        "projectId": "izehegc8",
+        "dataset": "production"
+    },
+    "project": {
+        "name": "SPFO"
+    },
+    "plugins": [
+        "@sanity/base",
+        "@sanity/default-layout",
+        "@sanity/default-login",
+        "@sanity/desk-tool",
+        "better-slug",
+        "asset-source-unsplash",
+        "@sanity/production-preview",
+        "webhook-deploy",
+        "iframe-pane",
+        "media"
+    ],
+    "env": {
+        "development": {
+            "plugins": ["@sanity/vision"]
+        }
+    },
+    "parts": [
+        {
+            "name": "part:@sanity/base/schema",
+            "path": "./schemas/schema"
+        },
+        {
+            "name": "part:@sanity/desk-tool/structure",
+            "path": "./desk-structure/index.js"
+        },
+        {
+            "implements": "part:@sanity/production-preview/resolve-production-url",
+            "path": "./resolveProductionUrl.js"
+        }
+    ]
+}
