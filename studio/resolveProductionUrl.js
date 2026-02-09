@@ -1,21 +1,17 @@
 // Any random string, must match SANITY_PREVIEW_SECRET in the Next.js .env.local file
-const previewSecret = "j8heapkqy4rdz6kudrvsc7ywpvfhrv022abyx5zgmuwpc1xv"
+const previewSecret = process.env.SANITY_STUDIO_PREVIEW_SECRET
 
 // Replace `remoteUrl` with your deployed Next.js site
-const devUrl = `https://spfodev.netlify.app`
+const devUrl = `https://4player-website.netlify.app`
 const localUrl = `http://localhost:3000`
-const prodUrl = `https://spfoprod.netlify.app`
-// const prodUrl = `https://spfo.dk`
+const prodUrl = `https://4player-website.netlify.app`
 
 export default function resolveProductionUrl(doc) {
-    // TODO: Also check if the doc has been published with a slug
-
     if (doc?.slug?.current) {
         let baseUrl
 
         if (window.location.hostname === "localhost") baseUrl = localUrl
-        if (window.location.hostname === "spfo.sanity.studio") baseUrl = devUrl
-        if (window.location.hostname === "spfocms.netlify.app")
+        if (window.location.hostname === "website-4player.sanity.studio")
             baseUrl = prodUrl
 
         const previewUrl = new URL(baseUrl)

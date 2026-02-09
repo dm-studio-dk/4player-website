@@ -5,13 +5,8 @@ export default defineCliConfig({
         projectId: "lpyhhrcy",
         dataset: "production",
     },
-    /**
-     * Enable auto-updates for studios.
-     * Learn more at https://www.sanity.io/docs/cli#auto-updates
-     */
-    studioHost: "4player-website",
+    studioHost: "website-4player",
     deployment: {
-        appId: "fe70e1fe76147c52150cbd4f",
         autoUpdates: true,
     },
 })
