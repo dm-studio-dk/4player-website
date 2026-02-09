@@ -48,7 +48,6 @@ export default function PodcastArticleHero({
             <div
                 className="main-area bg-current-theme pt-32 lg:pt-36 pb-16 relative flex items-center justify-center overflow-hidden"
                 style={{ minHeight: "100vh" }}>
-                <div className="horizontal-bg-big absolute top-0 left-0 w-full h-full opacity-[0.07] mix-blend-multiply" />
                 <ArticleNumberCounter
                     target={new Date(publishedAt).getDate()}
                     onComplete={onAnimationComplete}

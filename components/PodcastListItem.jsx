@@ -13,7 +13,6 @@ export default function PodcastListItem({ episode, className }) {
                 className,
             )}>
             <div className="site-grid bg-yellow-base py-4 relative ">
-                <div className="absolute top-0 left-0 w-full h-full horizontal-bg group-hover:bg-[center_top_42px] transition-all duration-500 ease-out" />
                 <div className="aspect-thumbnail col-span-full lg:col-span-3 flex items-center justify-center transition-all duration-500 ease-out">
                     <span className="font-display text-[154px] lg:pr-10">
                         {podcast.number}
