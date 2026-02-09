@@ -7,8 +7,8 @@ import documents from "./schemas/documents"
 import objects from "./schemas/objects"
 
 export default defineConfig({
-    title: "SPFO",
-    projectId: "izehegc8",
+    title: "4Player",
+    projectId: "lpyhhrcy",
     dataset: "production",
     plugins: [
         structureTool({
