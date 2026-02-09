@@ -90,7 +90,7 @@ export default (S) =>
                 ),
         ])
 
-export const getDefaultDocumentNode = ({ schemaType }) => {
+export const getDefaultDocumentNode = (S, { schemaType }) => {
     if (getContentConfig(schemaType)?.previewable || schemaType == "page") {
         return S.document().views([
             S.view.form(),

@@ -12,20 +12,20 @@ export default function Helmet({ page }) {
 
     return (
         <Head>
-            <title>{`${page.seoTitle || page.title} | SPFO`}</title>
+            <title>{`${page.seoTitle || page.title} | 4Player`}</title>
             <meta
                 name="description"
                 content={
                     page.seoDescription ||
                     page.description ||
                     page.subtitle ||
-                    "Spillernes fagforening"
+                    "4Player"
                 }
             />
             <meta name="og:title" content={page.seoTitle || page.title} />
             <meta name="og:url" content={fullUrl(asPath)} />
             <meta name="og:image" content={urlFor(image).url()} />
-            <meta name="og:site_name" content="SPFO — Spillerforeningen" />
+            <meta name="og:site_name" content="4Player" />
             <meta
                 name="og:description"
                 content={page.seoDescription || page.description}
