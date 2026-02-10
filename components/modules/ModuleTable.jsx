@@ -21,7 +21,7 @@ export default function ModuleTable({ module, small }) {
                         )}>
                         <tr className="title text-center">
                             <th
-                                className="font-display bg-black-full text-yellow-base py-7 text-lg px-4"
+                                className="font-display bg-black-full text-green-light py-7 text-lg px-4"
                                 colSpan={columns.length}>
                                 {title}
                             </th>

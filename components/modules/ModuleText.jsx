@@ -8,7 +8,7 @@ import { fileUrl, path } from "../../lib/helpers"
 
 export default function ModuleText({ module }) {
     return (
-        <div className="my-20 lg:my-32 theme-gray">
+        <div className="my-20 lg:my-32 theme-green-light">
             {module.title && (
                 <div className="container mx-auto title-container site-grid">
                     <h2 className="text-center uppercase font-display text-4xl leading-[1.1] lg:text-[80px] col-span-full lg:col-span-8 lg:col-start-3 ">

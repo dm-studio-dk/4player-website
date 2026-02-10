@@ -18,6 +18,9 @@ export default function Header({ navigation, moduleContext }) {
             let currentScroll = Math.max(0, window.scrollY)
             function handleScroll() {
                 const scroll = Math.max(0, window.scrollY)
+                
+                /*
+                // Temporary disabled to confirm with the client
                 if (scroll > currentScroll) {
                     if (invertedTop) {
                         if (scroll > window.innerHeight) setVisible(false)
@@ -25,6 +28,7 @@ export default function Header({ navigation, moduleContext }) {
                         setVisible(false)
                     }
                 }
+                */
 
                 if (scroll < currentScroll) setVisible(true)
 

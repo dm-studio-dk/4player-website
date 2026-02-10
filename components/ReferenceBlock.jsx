@@ -38,7 +38,7 @@ export default function ReferenceBlock({ title, reference }) {
                 </div>
                 {reference?.image && (
                     <div className="col-span-2 lg:pl-12">
-                        <div className="relative w-full aspect-[3/2] bg-gray-400">
+                        <div className="relative w-full aspect-[3/2] bg-green-light">
                             <Image
                                 className="transition-all duration-500 ease-out group-hover:scale-110"
                                 alt={title || reference?.title}

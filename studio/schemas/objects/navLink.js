@@ -11,6 +11,13 @@ export default {
             type: "string",
         },
         {
+            name: "isButton",
+            type: "boolean",
+            title: "Style as Button?",
+            initialValue: false,
+            hidden: ({ parent }) => parent.hasSubmenu,
+        },
+        {
             name: "hasSubmenu",
             type: "boolean",
             title: "Has submenu?",

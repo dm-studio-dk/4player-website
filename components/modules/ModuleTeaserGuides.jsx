@@ -7,7 +7,7 @@ export default function ModuleTeaserGuides({ module }) {
     return (
         <div
             className={classNames("module-wrapper", {
-                "theme-green bg-current-theme": hasBackground,
+                "theme-green-light bg-current-theme": hasBackground,
             })}>
             <div className="container mx-auto">
                 <div className="top-section site-grid">

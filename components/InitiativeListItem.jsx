@@ -15,7 +15,7 @@ export default function InitiativeListItem({ initiative, className }) {
             )}>
             <div className="relative py-10 border-t site-grid border-black-full border-opacity-10">
                 <div className="image-container col-span-full lg:col-span-3">
-                    <div className="relative flex items-center justify-center aspect-thumbnail bg-green-base ">
+                    <div className="relative flex items-center justify-center aspect-thumbnail bg-green-dusty ">
                         {image?.asset && (
                             <Image
                                 alt={title}

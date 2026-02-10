@@ -4,7 +4,7 @@
 
 @layer base {
     @font-face {
-        font-family: "SPFO";
+        font-family: "FourPlayer";
         font-weight: 700;
         src: url("/assets/fonts/SPFO-Bold.woff2");
         font-display: block;
@@ -92,25 +92,21 @@
         @apply mb-10 text-2xl lg:text-4xl font-display;
     }
 
-    .theme-green {
-        --color-theme: 213 242 194;
-        --color-theme-overlay: 171 229 133;
+    .theme-green-dusty {
+        --color-theme: 137 158 127;
+        --color-theme-overlay: 37 57 0;
     }
-    .theme-dark-green {
-        --color-theme: 187 221 197;
-        --color-theme-overlay: 153 204 168;
+    .theme-green-dark {
+        --color-theme: 37 57 0;
+        --color-theme-overlay: 137 158 127;
     }
-    .theme-blue-green {
-        --color-theme: 196 236 201;
-        --color-theme-overlay: 98 118 100;
+    .theme-green-light {
+        --color-theme: 217 233 207;
+        --color-theme-overlay: 37 57 0;
     }
-    .theme-yellow {
-        --color-theme: 236 250 182;
-        --color-theme-overlay: 220 232 169;
-    }
-    .theme-gray {
-        --color-theme: 242 243 238;
-        --color-theme-overlay: 220 232 169;
+    .theme-gray-light {
+        --color-theme: 240 240 240;
+        --color-theme-overlay: 37 57 0;
     }
 
     .line {

@@ -94,8 +94,7 @@ function YearSection({ year }) {
                     </div>
                     <div className="events col-span-full lg:col-span-5 lg:col-start-8 pt-32 lg:pt-0 pb-[200px] lg:pb-[280px]">
                         {year.image && (
-                            <div className="relative w-full mt-6 bg-gray-400 aspect-thumbnail lg:mt-8">
-                                <Image
+                                                            <div className="relative w-full mt-6 bg-green-light aspect-thumbnail lg:mt-8">                                <Image
                                     layout="fill"
                                     objectFit="cover"
                                     loader={sanityLoader()}

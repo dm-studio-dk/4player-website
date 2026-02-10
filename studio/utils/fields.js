@@ -50,7 +50,7 @@ export function slugField({
         options: {
             source,
             slugify: slugify({ prefix }),
-            basePath: `spillerforeningen.dk`,
+            basePath: `4player.dk`,
             maxLength: 30,
             isUnique(slug, options) {
                 const { document, getClient } = options

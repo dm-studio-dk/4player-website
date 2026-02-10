@@ -9,12 +9,12 @@ export default function ContactPersonCard({ person, teaser, className }) {
                 "container site-grid mx-auto font-serif",
                 className,
             )}>
-            <div className="flex flex-col px-8 py-6 text-center bg-gray-100 card col-span-full lg:col-span-6 lg:col-start-4 lg:flex-row lg:text-left">
+            <div className="flex flex-col px-8 py-6 text-center bg-green-light card col-span-full lg:col-span-6 lg:col-start-4 lg:flex-row lg:text-left">
                 <div className="mx-auto image lg:mx-0 lg:pr-8">
                     {person.image?.asset?._id && (
                         <div
                             className={classNames(
-                                "overflow-hidden rounded-full aspect-square -translate-y-1 block relative w-[105px] lg:w-[154px] bg-gray-400",
+                                "overflow-hidden rounded-full aspect-square -translate-y-1 block relative w-[105px] lg:w-[154px] bg-green-light",
                             )}>
                             <Image
                                 alt={person.name}

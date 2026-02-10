@@ -91,8 +91,7 @@ export default function Slide({
                     "w-0": !startsFull,
                 },
             )}>
-            <div className="absolute top-0 w-screen h-full -translate-x-1/2 bg-gray-400 image-container left-1/2">
-                {slide.image.asset && (
+                            <div className="absolute top-0 w-screen h-full -translate-x-1/2 bg-green-light image-container left-1/2">                {slide.image.asset && (
                     <Image
                         alt={slide.title}
                         layout="fill"

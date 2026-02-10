@@ -1,3 +1,4 @@
+import Link from "next/link"
 import CircleLogo from "./CircleLogo"
 
 export default function Footer({
@@ -9,14 +10,16 @@ export default function Footer({
     return (
         <div>
             {/* <NewsletterForm {...newsletter} /> */}
-            <footer className="px-6 pt-20 pb-12 font-serif text-center text-white bg-black-full">
+            <footer className="px-6 pt-20 pb-12 font-serif text-center text-white bg-green-dark">
                 <div className="flex flex-col items-center w-full text-center meta lg:col-span-6">
                     <div className="logo">
-                        {/* <img
-                        src="/assets/images/circle_logo_white.svg"
-                        alt="Circular spillerforening logo"
-                    /> */}
-                        <CircleLogo />
+                        <Link href="/">
+                            <img 
+                                src="/assets/images/4player-logo.svg" 
+                                alt="4player logo" 
+                                className="h-12 w-auto"
+                            />
+                        </Link>
                     </div>
                     <p className="max-w-[45ch] text-lg mt-11">{description}</p>
                     <div className="mt-10 space-y-2 text-base whitespace-pre address">
@@ -71,14 +74,10 @@ export default function Footer({
                     </ul>
                     <div className="flex flex-col items-center justify-between w-full mt-24 lg:flex-row">
                         <div className="logo">
-                            <p>&copy; Spillerforeningen</p>
+                            <p>&copy; 4player</p>
                         </div>
                         <div className="hidden logo lg:block">
-                            <img
-                                className="block"
-                                src="/assets/images/player_mark_white.svg"
-                                alt=""
-                            />
+                            
                         </div>
                     </div>
                 </div>

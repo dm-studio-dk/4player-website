@@ -38,7 +38,7 @@ export default function FeatureArticleHero({
             <div className="relative flex items-center justify-center min-h-screen pt-32 text-white main-area lg:py-20 lg:pt-40">
                 {image?.asset && (
                     <div className="absolute top-0 left-0 w-full h-full image-container">
-                        <div className="absolute bottom-0 w-full h-full -translate-x-1/2 bg-gray-400 left-1/2">
+                        <div className="absolute bottom-0 w-full h-full -translate-x-1/2 bg-green-light left-1/2">
                             <Image
                                 alt={title}
                                 loader={sanityLoader()}

@@ -30,22 +30,20 @@ export default function HeaderMobile({ navigation, invertedTop, showBg }) {
             <div
                 className={classNames(
                     "bar fixed left-0 top-0 font-serif z-50 w-screen transition-all duration-300 ease-in-out lg:hidden py-5",
-                    {
-                        "text-white": invertedTop && !open && !showBg,
-                        "text-black-full": showBg || open,
-                        "bg-white": showBg,
-                    },
+                    "bg-green-dark text-white", // Solid green permanently
                 )}>
                 <div className="inner flex items-center justify-between w-screen container mx-auto">
-                    <div className="logo">
-                        <Link
-                            href="/"
-                            className="text-2xl font-bold font-display">
-                            SPFO
+                    <div className="logo px-4">
+                        <Link href="/">
+                            <img 
+                                src="/assets/images/4player-logo.svg" 
+                                alt="4player logo" 
+                                className="h-6 w-auto"
+                            />
                         </Link>
                     </div>
                     <div
-                        className="menu-button relative w-[23px] h-[23px] overflow-hidden"
+                        className="menu-button relative w-[23px] h-[23px] overflow-hidden mr-4"
                         onClick={() => setOpen(!open)}>
                         <svg
                             className={classNames(
@@ -63,25 +61,19 @@ export default function HeaderMobile({ navigation, invertedTop, showBg }) {
                             <rect
                                 width="23"
                                 height="3"
-                                fill={
-                                    !invertedTop || showBg ? "black" : "white"
-                                }
+                                fill="white"
                             />
                             <rect
                                 y="7"
                                 width="23"
                                 height="3"
-                                fill={
-                                    !invertedTop || showBg ? "black" : "white"
-                                }
+                                fill="white"
                             />
                             <rect
                                 y="14"
                                 width="23"
                                 height="3"
-                                fill={
-                                    !invertedTop || showBg ? "black" : "white"
-                                }
+                                fill="white"
                             />
                         </svg>
                         <svg
@@ -99,7 +91,7 @@ export default function HeaderMobile({ navigation, invertedTop, showBg }) {
                             xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M66.85 8.33L58.52 0L33.88 24.64L9.24003 0L0.910034 8.33L25.55 32.97L0.910034 57.61L9.24003 65.94L33.88 41.3L58.52 65.94L66.85 57.61L42.21 32.97L66.85 8.33Z"
-                                fill="black"
+                                fill="white"
                             />
                         </svg>
                     </div>
@@ -125,15 +117,6 @@ export default function HeaderMobile({ navigation, invertedTop, showBg }) {
                             <HeaderItem mobile key={item.label} item={item} />
                         ))}
                     </nav>
-                </div>
-                <div className="emblem self-center absolute bottom-10 left-1/2 -translate-x-1/2">
-                    <img
-                        className=""
-                        src="/assets/images/player_mark_black.svg"
-                        alt=""
-                        width="40"
-                        height="40"
-                    />
                 </div>
             </div>
         </>

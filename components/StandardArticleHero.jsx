@@ -47,7 +47,7 @@ export default function StandardArticleHero({
     }, [])
 
     return (
-        <div className="theme-green">
+        <div className="theme-green-dusty">
             <div
                 ref={offsetRef}
                 className="relative flex items-center justify-center pt-32 pb-16 main-area bg-current-theme lg:pt-36"
@@ -82,7 +82,7 @@ export default function StandardArticleHero({
                         <div className="relative w-full">
                             <div className="w-full site-grid">
                                 <motion.div
-                                    className="relative bg-gray-400 lg:col-span-6 lg:col-start-4 col-span-full"
+                                    className="relative bg-green-light lg:col-span-6 lg:col-start-4 col-span-full"
                                     style={{
                                         aspectRatio: `${image.asset.metadata.dimensions.aspectRatio}`,
                                     }}>

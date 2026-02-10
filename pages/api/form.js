@@ -26,7 +26,7 @@ export default async function handler(req, res) {
                 client,
                 email: data.email,
                 asHtml: true,
-                subject: "Tak for din indmeldelse i Spillerforeningen",
+                subject: "Tak for din indmeldelse i 4player",
                 content: `
                     <p>
                         Vi har nu registreret modtagelse af dit ønske om indmeldelse. Indmeldelsen vil blive behandlet manuelt indenfor 1-2 arbejdsdage, hvorefter du vil modtage din konkrete bekræftelse på indmeldelse i form af en velkomstmail, ligesom du vil modtage en separat mail, hvor vi beder dig betale kontingent for indeværende kontingentperiode.
@@ -41,7 +41,7 @@ export default async function handler(req, res) {
                     client,
                     email: data.email,
                     asHtml: true,
-                    subject: "Thank you for signing up to Spillerforeningen",
+                    subject: "Thank you for signing up to 4player",
                     content: `
                         <p>
                             We have now registered your request for registration. The registration will be processed manually within 1-2 working days, after which you will receive your concrete confirmation of registration in the form of a welcome email, just as you will receive a separate email where we ask you to pay the membership fee for the current membership period.

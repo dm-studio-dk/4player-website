@@ -35,7 +35,7 @@ export default function NewsTeaserCard({ article, className = "" }) {
                 }}>
                 {image?.asset && (
                     <div
-                        className="absolute top-0 left-0 w-full h-full bg-gray-400"
+                        className="absolute top-0 left-0 w-full h-full bg-green-light"
                         ref={imageRef}>
                         <Image
                             itemRef=""
@@ -53,7 +53,7 @@ export default function NewsTeaserCard({ article, className = "" }) {
                 ) : (
                     image?.asset && (
                         <div
-                            className="absolute top-0 left-0 w-full h-full bg-gray-400"
+                            className="absolute top-0 left-0 w-full h-full bg-green-light"
                             ref={imageRef}>
                             <Image
                                 itemRef=""
