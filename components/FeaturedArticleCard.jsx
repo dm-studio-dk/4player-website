@@ -11,7 +11,7 @@ export default function FeaturedArticleCard({ article }) {
         <Link
             href={path(slug.current)}
             className="container mx-auto mt-40 transition-all duration-300 site-grid mb-28 hover:opacity-80">
-            <div className="mb-5 bg-gray-400 image-container col-span-full lg:col-span-6 lg:mb-0">
+            <div className="mb-5 bg-green-light image-container col-span-full lg:col-span-6 lg:mb-0">
                 {image?.asset && (
                     <Image
                         alt={title}

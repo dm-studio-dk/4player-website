@@ -59,7 +59,7 @@ export default function PressArticleHero({
                     <div className="relative w-full mt-20">
                         <div className="w-full site-grid">
                             <div
-                                className="relative bg-gray-400 lg:col-span-8 lg:col-start-3 col-span-full"
+                                className="relative bg-green-light lg:col-span-8 lg:col-start-3 col-span-full"
                                 style={{
                                     aspectRatio: `${image.asset.metadata.dimensions.aspectRatio}`,
                                 }}>

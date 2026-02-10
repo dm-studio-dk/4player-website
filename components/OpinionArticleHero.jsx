@@ -32,7 +32,7 @@ export default function StandardArticleHero({
         }
     }, [])
     return (
-        <div className="theme-dark-green">
+        <div className="theme-green-dark">
             <div className="main-area bg-current-theme flex items-center py-40 lg:pt-60 justify-center lg:h-screen">
                 <div className="absolute top-0 left-0 w-full h-full diagonal-bg mix-blend-overlay opacity-50" />
                 <ArticleNumberCounter

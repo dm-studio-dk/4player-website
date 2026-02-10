@@ -76,11 +76,10 @@ export default {
             initialValue: "none",
             options: {
                 list: [
-                    {
-                        title: "None (not a part of Spillerforeningen)",
-                        value: "none",
-                    },
-                    ...PERSON_DEPARTMENTS,
+                                    {
+                                        title: "None (not a part of 4player)",
+                                        value: "none",
+                                    },                    ...PERSON_DEPARTMENTS,
                 ],
             },
         },

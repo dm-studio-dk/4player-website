@@ -12,7 +12,7 @@ export default function ShortNameImage({ person, className, bigImage }) {
             {person.shortName} {""}
             <span
                 className={classNames(
-                    "overflow-hidden rounded-full aspect-square h-full ml-2 lg:ml-5 -translate-y-1 inline-block relative bg-gray-400",
+                    "overflow-hidden rounded-full aspect-square h-full ml-2 lg:ml-5 -translate-y-1 inline-block relative bg-green-light",
                     {
                         "w-12 lg:w-[105px]": !bigImage,
                         "w-12 lg:w-32": bigImage,

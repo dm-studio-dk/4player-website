@@ -25,9 +25,30 @@ module.exports = {
             fontFamily: {
                 sans: ["KP Sans", "sans-serif"],
                 serif: ["GT Alpina", "serif"],
-                display: ["SPFO", "sans-serif"],
+                display: ["FourPlayer", "sans-serif"],
             },
             colors: {
+                // New 4player Palette
+                green: {
+                    dark: "#253900",   // MØRK GRØN
+                    dusty: "#899E7F",  // STØVET GRØN
+                    light: "#D9E9CF",  // LYS GRØN
+                },
+                gray: {
+                    light: "#F0F0F0",  // LYS GRÅ
+                },
+                white: "#FFFFFF",      // HVID
+                black: {
+                    full: "#000000",   // SORT
+                    almost: "#141414", 
+                },
+
+                "current-theme": withOpacityValue("--color-theme"),
+                "current-theme-overlay": withOpacityValue(
+                    "--color-theme-overlay",
+                ),
+
+                /* OLD COLORS
                 black: {
                     full: "#000000",
                     almost: "#141414",
@@ -58,10 +79,7 @@ module.exports = {
                     base: "#ECFAB6",
                     "base-line": "#DCE8A9",
                 },
-                "current-theme": withOpacityValue("--color-theme"),
-                "current-theme-overlay": withOpacityValue(
-                    "--color-theme-overlay",
-                ),
+                */
             },
             borderRadius: {
                 DEFAULT: "1rem",

@@ -4,7 +4,7 @@ import { classNames } from "../lib/helpers"
 
 export default function Accordion({ title, items = [], className }) {
     return (
-        <div className={classNames("bg-yellow-base py-12 my-12", className)}>
+        <div className={classNames("bg-green-light py-12 my-12", className)}>
             <div className="site-grid container mx-auto">
                 <h2 className="font-display text-2xl col-span-full lg:col-span-6 lg:col-start-4 border-b-2 border-black-almost border-opacity-10 pb-4">
                     {title}

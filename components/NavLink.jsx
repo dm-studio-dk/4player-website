@@ -8,9 +8,12 @@ const NavLink = ({ item, isActive, className, onMouseLeave = () => {} }) =>
             key={item.linkTo.slug.current}
             onMouseLeave={onMouseLeave}
             className={classNames(
-                "tracking-wider hover:opacity-60 mix-blend-difference inline-block w-full lg:w-auto pointer-events-auto whitespace-nowrap",
+                "tracking-wider hover:opacity-60 inline-block w-full lg:w-auto pointer-events-auto whitespace-nowrap transition-all duration-300",
                 {
-                    underline: isActive,
+                    "mix-blend-difference": !item.isButton,
+                    "bg-green-light text-green-dark px-4 py-2":
+                        item.isButton,
+                    underline: isActive && !item.isButton,
                     ...className,
                 },
             )}>
@@ -23,9 +26,12 @@ const NavLink = ({ item, isActive, className, onMouseLeave = () => {} }) =>
             key={item.url}
             onMouseLeave={onMouseLeave}
             className={classNames(
-                "tracking-wider hover:opacity-60 mix-blend-difference inline-block w-full lg:w-auto pointer-events-auto whitespace-nowrap",
+                "tracking-wider hover:opacity-60 inline-block w-full lg:w-auto pointer-events-auto whitespace-nowrap transition-all duration-300",
                 {
-                    underline: isActive,
+                    "mix-blend-difference": !item.isButton,
+                    "bg-green-light text-green-dark px-4 py-2":
+                        item.isButton,
+                    underline: isActive && !item.isButton,
                     ...className,
                 },
             )}>

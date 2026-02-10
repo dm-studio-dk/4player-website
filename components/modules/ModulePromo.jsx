@@ -32,7 +32,7 @@ export function PromoFull({
             <div className="module-divider"></div>
             <div className="pt-20 lg:pt-32"></div>
             <AdaptableLink
-                className="relative flex items-center justify-center pt-32 bg-gray-400 py-28 lg:pb-44 lg:pt-60 group"
+                className="relative flex items-center justify-center pt-32 bg-green-light py-28 lg:pb-44 lg:pt-60 group"
                 href={href}>
                 {image?.asset && (
                     <Image
@@ -93,7 +93,7 @@ export function PromoSplit({
                 href={href}>
                 <div className="module-divider"></div>
                 <div className="items-center mx-auto site-grid gap-y-0 module-wrapper">
-                    <div className="mb-5 bg-gray-400 image-container col-span-full lg:col-span-6 lg:mb-0">
+                    <div className="mb-5 bg-green-light image-container col-span-full lg:col-span-6 lg:mb-0">
                         {image?.asset && (
                             <Image
                                 alt={title}

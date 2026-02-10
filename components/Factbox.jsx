@@ -17,7 +17,7 @@ export default function Factbox({ title, body, image, black = false }) {
                 )}>
                 <h3
                     className={classNames("text-lg font-bold font-display", {
-                        "text-yellow-base": black,
+                        "text-green-light": black,
                     })}>
                     {title}
                 </h3>
@@ -48,7 +48,7 @@ export default function Factbox({ title, body, image, black = false }) {
                 {image?.asset && (
                     <div className="mt-16 md:w-3/5">
                         <div
-                            className="relative w-full bg-gray-400 image-container"
+                            className="relative w-full bg-green-light image-container"
                             style={{
                                 aspectRatio: `${image.asset.metadata.dimensions.aspectRatio}`,
                             }}>

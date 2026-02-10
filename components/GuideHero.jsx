@@ -6,7 +6,7 @@ export default function GuideHero({ guide }) {
             <div className="absolute top-0 left-0 w-full h-full diagonal-bg-white opacity-[0.1666] -scale-x-100" />
             <div className="px-8 mx-auto text-center">
                 <p className="font-serif text-sm font-bold">Guide</p>
-                <h1 className="text-4xl lg:text-[110px] leading-tight mt-7 font-bold uppercase font-display text-yellow-base">
+                <h1 className="text-4xl lg:text-[110px] leading-tight mt-7 font-bold uppercase font-display text-green-light">
                     {title}
                 </h1>
                 <div className="site-grid container mx-auto">

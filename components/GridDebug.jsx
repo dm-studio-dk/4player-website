@@ -25,7 +25,7 @@ export function GridDebug() {
                             {cols.map((col, index) => (
                                 <div
                                     key={index}
-                                    className=" bg-orange-light opacity-5"></div>
+                                    className=" bg-green-dark opacity-5"></div>
                             ))}
                         </div>
                     </div>

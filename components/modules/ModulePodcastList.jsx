@@ -26,7 +26,7 @@ function PodcastListItem({ podcast, border }) {
     return (
         <div
             className={classNames("site-grid py-10", {
-                "border-b border-gray-500": border,
+                "border-b border-gray-light": border,
             })}>
             <div className="play-button col-span-3">PLAY</div>
             <div className="play-button col-span-3">{podcast.title}</div>

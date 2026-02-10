@@ -44,7 +44,7 @@ export default function PodcastArticleHero({
     }, [hasShown])
 
     return (
-        <div className="theme-yellow">
+        <div className="theme-green-light">
             <div
                 className="main-area bg-current-theme pt-32 lg:pt-36 pb-16 relative flex items-center justify-center overflow-hidden"
                 style={{ minHeight: "100vh" }}>

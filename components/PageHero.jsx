@@ -90,8 +90,7 @@ export default function PageHero({
                         })}>
                         <Image
                             alt={title}
-                            className="transition-all duration-500 ease-out bg-gray-400"
-                            layout="fill"
+                                                                className="transition-all duration-500 ease-out bg-green-light"                            layout="fill"
                             objectFit="cover"
                             objectPosition="center"
                             loader={sanityLoader()}

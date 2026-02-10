@@ -7,11 +7,11 @@ export const ARTICLE_TYPE_LABELS = {
 }
 
 export const ARTICLE_COLOR_THEMES = {
-    standard: "theme-green",
-    podcast: "theme-yellow",
-    opinion: "theme-dark-green",
-    pressrelease: "theme-dark-green",
-    feature: "theme-green",
+    standard: "theme-green-light",
+    podcast: "theme-green-light",
+    opinion: "theme-green-dark",
+    pressrelease: "theme-green-dark",
+    feature: "theme-green-light",
 }
 
 export const FORM_CONFIG = {

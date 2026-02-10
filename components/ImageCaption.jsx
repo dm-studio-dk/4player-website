@@ -6,8 +6,7 @@ export default function ImageCaption({ caption, image, className }) {
     return (
         image && (
             <div className={classNames(className, "mt-12")}>
-                <div
-                    className="relative w-full bg-gray-400 image-container"
+                                        <div className="relative w-full bg-green-light image-container"
                     style={{
                         aspectRatio: `${image.asset.metadata.dimensions.aspectRatio}`,
                     }}>
