@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@azure/msal-node": "^1.18.4",
+    "@sanity/image-url": "^2.0.3",
     "@sanity/webhook": "^4.0.4",
     "@sentry/nextjs": "^9.47.1",
+    "@sentry/react": "^10.43.0",
     "cheerio": "^1.2.0",
     "classnames": "^2.5.1",
     "cors": "^2.8.6",

@@ -1,34 +1,34 @@
-import classNames from "classnames"
-import { motion } from "framer-motion"
-import { useRouter } from "next/router"
-import { useCallback, useEffect, useRef, useState } from "react"
-import { path } from "../lib/helpers"
-import NavLink from "./NavLink"
+import classNames from "classnames";
+import { motion } from "framer-motion";
+import { useRouter } from "next/router";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { path } from "../lib/helpers";
+import NavLink from "./NavLink";
 
 const HeaderItem = ({ item, mobile, onSubmenuShow, onSubmenuHide }) => {
-    const submenuRef = useRef()
-    const { events, asPath } = useRouter()
-    const [isOpen, setIsOpen] = useState(false)
+    const submenuRef = useRef();
+    const { events, asPath } = useRouter();
+    const [isOpen, setIsOpen] = useState(false);
     const onMouseEnter = useCallback(
         (event) => {
-            if (mobile) return
+            if (mobile) return;
 
-            setIsOpen(true)
-            onSubmenuShow?.(event.currentTarget)
+            setIsOpen(true);
+            onSubmenuShow?.(event.currentTarget);
         },
         [onSubmenuShow],
-    )
+    );
     const onMouseLeave = useCallback(() => {
-        if (mobile) return
+        if (mobile) return;
 
-        setIsOpen(false)
-        onSubmenuHide?.()
-    }, [onSubmenuHide])
+        setIsOpen(false);
+        onSubmenuHide?.();
+    }, [onSubmenuHide]);
 
     useEffect(() => {
-        const handleRouteChangeStart = () => setIsOpen(false)
-        return events.off("routeChangeStart", handleRouteChangeStart)
-    }, [])
+        const handleRouteChangeStart = () => setIsOpen(false);
+        return events.off("routeChangeStart", handleRouteChangeStart);
+    }, []);
 
     // useEffect(() => {
     //     if (isOpen) {
@@ -36,22 +36,26 @@ const HeaderItem = ({ item, mobile, onSubmenuShow, onSubmenuHide }) => {
     //     }
     // }, [isOpen])
 
-    if (!item) return <></>
+    if (!item) return <></>;
 
     if (item.external)
         return (
             <a
                 href={item.url}
                 target="_blank"
-                className={classNames("inline-block transition-all duration-300", {
-                    "bg-green-light text-green-dark px-4 py-2 hover:opacity-80":
-                        item.isButton,
-                    "mix-blend-difference hover:opacity-60": !item.isButton,
-                })}
-                key={item.url}>
+                className={classNames(
+                    "inline-block transition-all duration-300",
+                    {
+                        "bg-green-light text-green-dark px-4 py-2 hover:opacity-80":
+                            item.isButton,
+                        "mix-blend-difference hover:opacity-60": !item.isButton,
+                    },
+                )}
+                key={item.url}
+            >
                 {item.label}
             </a>
-        )
+        );
 
     if (item.linkTo)
         return (
@@ -59,7 +63,7 @@ const HeaderItem = ({ item, mobile, onSubmenuShow, onSubmenuHide }) => {
                 item={item}
                 isActive={asPath == `/${item.linkTo.slug.current}`}
             />
-        )
+        );
 
     if (item.hasSubmenu) {
         return (
@@ -68,18 +72,20 @@ const HeaderItem = ({ item, mobile, onSubmenuShow, onSubmenuHide }) => {
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
                 onClick={() => {
-                    if (mobile) setIsOpen(!isOpen)
-                }}>
+                    if (mobile) setIsOpen(!isOpen);
+                }}
+            >
                 <h3
                     className={classNames(
                         "relative inline-block whitespace-nowrap",
-                        item.subLinks.some(
+                        item.subLinks?.some(
                             (subLink) =>
                                 asPath == path(subLink.linkTo?.slug.current),
                         )
                             ? "underline mix-blend-difference"
                             : "mix-blend-difference",
-                    )}>
+                    )}
+                >
                     {item.label}
                 </h3>
                 <div
@@ -92,8 +98,9 @@ const HeaderItem = ({ item, mobile, onSubmenuShow, onSubmenuHide }) => {
                                 ? " block"
                                 : " hidden"
                             : " absolute top-full left-0 pt-4 space-y-2 no-underline")
-                    }>
-                    {item.subLinks.map((subLink) => (
+                    }
+                >
+                    {item.subLinks?.map((subLink) => (
                         <NavLink
                             key={subLink.label}
                             item={subLink}
@@ -104,8 +111,8 @@ const HeaderItem = ({ item, mobile, onSubmenuShow, onSubmenuHide }) => {
                     ))}
                 </div>
             </div>
-        )
+        );
     }
-}
+};
 
-export default HeaderItem
+export default HeaderItem;
