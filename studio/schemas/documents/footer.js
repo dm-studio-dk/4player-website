@@ -60,7 +60,7 @@ export default {
                     type: "url",
                 },
                 {
-                    name: "twitter",
+                    name: "linkedin",
                     type: "url",
                 },
             ],
@@ -90,4 +90,4 @@ export default {
     preview: {
         prepare: () => ({ title: "Footer Settings" }),
     },
-}
+};

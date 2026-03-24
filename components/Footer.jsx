@@ -1,5 +1,5 @@
-import Link from "next/link"
-import CircleLogo from "./CircleLogo"
+import Link from "next/link";
+import CircleLogo from "./CircleLogo";
 
 export default function Footer({
     links = [],
@@ -14,9 +14,9 @@ export default function Footer({
                 <div className="flex flex-col items-center w-full text-center meta lg:col-span-6">
                     <div className="logo">
                         <Link href="/">
-                            <img 
-                                src="/assets/images/4player-logo.svg" 
-                                alt="4player logo" 
+                            <img
+                                src="/assets/images/4player-logo.svg"
+                                alt="4player logo"
                                 className="h-12 w-auto"
                             />
                         </Link>
@@ -26,12 +26,14 @@ export default function Footer({
                         <p>{contact.address}</p>
                         <a
                             className="block text-center"
-                            href={"tel:" + contact.phone}>
+                            href={"tel:" + contact.phone}
+                        >
                             {contact.phone}
                         </a>
                         <a
                             className="block text-center"
-                            href={"mailto:" + contact.email.toLowerCase()}>
+                            href={"mailto:" + contact.email.toLowerCase()}
+                        >
                             {contact.email}
                         </a>
                     </div>
@@ -52,11 +54,11 @@ export default function Footer({
                                 />
                             </a>
                         )}
-                        {social.twitter && (
-                            <a href={social.twitter} target="_blank">
+                        {social.linkedin && (
+                            <a href={social.linkedin} target="_blank">
                                 <img
                                     className="w-6 h-6"
-                                    src="/assets/icons/logo-twitter.svg"
+                                    src="/assets/icons/logo-linkedin.svg"
                                 />
                             </a>
                         )}
@@ -76,12 +78,10 @@ export default function Footer({
                         <div className="logo">
                             <p>&copy; 4player</p>
                         </div>
-                        <div className="hidden logo lg:block">
-                            
-                        </div>
+                        <div className="hidden logo lg:block"></div>
                     </div>
                 </div>
             </footer>
         </div>
-    )
+    );
 }
