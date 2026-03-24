@@ -13,7 +13,7 @@ export default function GuideTeaserCard({ guide, className = "" }) {
                 {guide.title}
             </h3>
             <p className="mt-4 lg:mt-0 col-span-full lg:col-span-4 lg:col-start-5 text-center self-start">
-                {guide.subtitle}
+                {guide.subtitle ?? guide.description}
             </p>
             <div className="icon-container hidden lg:flex justify-end lg:col-start-12 self-start">
                 <img src="/assets/icons/arrow_right.svg" className="w-8" />

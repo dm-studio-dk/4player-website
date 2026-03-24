@@ -11,7 +11,7 @@ import ModulePersonList from "../components/modules/ModulePersonList"
 import ModulePodcastList from "../components/modules/ModulePodcastList"
 import ModuleHistoryList from "components/modules/ModuleHistoryList"
 import ModulePricingTable from "components/modules/ModulePricingTable"
-import ModuleTeaserGuides from "../components/modules/ModuleTeaserGuides"
+import ModuleLinkTeaser from "../components/modules/ModuleLinkTeaser"
 import ModuleContactPerson from "components/modules/ModuleContactPerson"
 import ModuleTeaserPodcast from "components/modules/ModuleTeaserPodcast"
 import ModuleTeaserArticles from "../components/modules/ModuleTeaserArticles"
@@ -36,7 +36,7 @@ export default {
     modulePodcastList: ModulePodcastList,
     moduleHistoryList: ModuleHistoryList,
     moduleArticleList: ModuleArticleList,
-    moduleTeaserGuides: ModuleTeaserGuides,
+    moduleTeaserGuides: ModuleLinkTeaser,
     modulePricingTable: ModulePricingTable,
     moduleTeaserPodcast: ModuleTeaserPodcast,
     moduleContactPerson: ModuleContactPerson,

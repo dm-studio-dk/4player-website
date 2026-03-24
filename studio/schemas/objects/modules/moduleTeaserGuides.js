@@ -1,10 +1,10 @@
-import { IoHelpCircleSharp } from "react-icons/io5"
+import { IoLinkSharp } from "react-icons/io5"
 
 export default {
     name: "moduleTeaserGuides",
-    title: "Guides Teaser",
+    title: "Link teaser",
     type: "object",
-    icon: IoHelpCircleSharp,
+    icon: IoLinkSharp,
     fields: [
         {
             name: "title",
@@ -24,12 +24,12 @@ export default {
         },
         {
             name: "guides",
-            title: "Guides",
+            title: "Pages",
             type: "array",
             of: [
                 {
                     type: "reference",
-                    to: [{ type: "guide" }],
+                    to: [{ type: "page" }],
                     weak: true,
                     options: {
                         disableNew: true,
@@ -40,16 +40,15 @@ export default {
     ],
     preview: {
         select: {
-            mode: "mode",
             guides: "guides",
         },
-        prepare({ mode, guides = [] }) {
+        prepare({ guides = [] }) {
             return {
-                title: "Guides Teaser",
+                title: "Link teaser",
                 subtitle:
-                    mode == "latest"
-                        ? "Latest 3 guides"
-                        : guides.length + " guides selected",
+                    guides.length === 1
+                        ? "1 page selected"
+                        : guides.length + " pages selected",
             }
         },
     },

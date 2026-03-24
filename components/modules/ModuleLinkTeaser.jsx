@@ -1,7 +1,7 @@
 import classNames from "classnames"
 import GuideTeaserCard from "../GuideTeaserCard"
 
-export default function ModuleTeaserGuides({ module }) {
+export default function ModuleLinkTeaser({ module }) {
     const { guides, hasBackground, subtitle } = module
 
     return (
@@ -22,16 +22,14 @@ export default function ModuleTeaserGuides({ module }) {
                     {guides &&
                         guides
                             .filter(Boolean)
-                            .map((guide) => (
+                            .map((page) => (
                                 <GuideTeaserCard
                                     className="border-t border-black-almost border-opacity-10"
-                                    guide={guide}
-                                    key={guide.slug.current}
+                                    guide={page}
+                                    key={page.slug.current}
                                 />
                             ))}
                 </div>
-
-                {/* <div className="module-divider"></div> */}
             </div>
         </div>
     )
