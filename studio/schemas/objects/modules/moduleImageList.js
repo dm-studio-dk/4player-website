@@ -3,8 +3,8 @@ import {
     IoLinkSharp,
     IoMenuSharp,
     IoShareSharp,
-} from "react-icons/io5";
-import { linkableReferenceTypes } from "./../../../utils/fields";
+} from "react-icons/io5"
+import { linkableReferenceTypes } from "./../../../utils/fields"
 
 export default {
     name: "moduleImageList",
@@ -81,6 +81,15 @@ export default {
                                     },
                                 },
                             ],
+                        },
+                        {
+                            name: "readMore",
+                            title: "Read more button",
+                            description:
+                                "Add an entry to show a button after the body text. Leave empty to hide.",
+                            type: "array",
+                            of: [{ type: "ctaLink" }],
+                            validation: (Rule) => Rule.max(1),
                         },
                     ],
                 },

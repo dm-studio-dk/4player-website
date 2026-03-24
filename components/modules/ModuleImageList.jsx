@@ -1,9 +1,10 @@
-import SplitRow from "components/SplitRow";
-import { path } from "lib/helpers";
-import { sanityLoader } from "lib/imageLoader";
-import Image from "next/legacy/image";
-import Link from "next/link";
-import PortableText from "react-portable-text";
+import SplitRow from "components/SplitRow"
+import Button from "components/Button"
+import { path } from "lib/helpers"
+import { sanityLoader } from "lib/imageLoader"
+import Image from "next/legacy/image"
+import Link from "next/link"
+import PortableText from "react-portable-text"
 
 export default function ModuleImageList({ module }) {
     const { title, items } = module;
@@ -88,6 +89,34 @@ export default function ModuleImageList({ module }) {
                                             }}
                                         />
                                     )}
+                                    {(item.readMore || []).map((cta) => {
+                                        const href =
+                                            cta.linkType === "internal"
+                                                ? path(
+                                                      cta.reference?.slug
+                                                          ?.current,
+                                                  ) || ""
+                                                : cta.url || ""
+                                        if (!href) return null
+                                        return (
+                                            <div
+                                                key={cta._key}
+                                                className="mt-4 cta"
+                                            >
+                                                <Button
+                                                    href={href}
+                                                    internal={
+                                                        cta.linkType ===
+                                                        "internal"
+                                                    }
+                                                    arrow="right"
+                                                >
+                                                    {cta.buttonLabel ||
+                                                        "Læs mere"}
+                                                </Button>
+                                            </div>
+                                        )
+                                    })}
                                 </div>
                             }
                         ></SplitRow>
