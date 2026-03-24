@@ -3,8 +3,8 @@ import {
     IoLinkSharp,
     IoMenuSharp,
     IoShareSharp,
-} from "react-icons/io5"
-import { linkableReferenceTypes } from "./../../../utils/fields"
+} from "react-icons/io5";
+import { linkableReferenceTypes } from "./../../../utils/fields";
 
 export default {
     name: "moduleImageList",
@@ -96,7 +96,7 @@ export default {
             return {
                 title: title || "Image List",
                 subtitle: `${items?.length ? items.length : 0} items`,
-            }
+            };
         },
     },
-}
+};

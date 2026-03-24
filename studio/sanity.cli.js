@@ -7,6 +7,7 @@ export default defineCliConfig({
     },
     studioHost: "website-4player",
     deployment: {
+        appId: "c6f84xjg3mz9fn6xv52al1hh",
         autoUpdates: true,
     },
 })

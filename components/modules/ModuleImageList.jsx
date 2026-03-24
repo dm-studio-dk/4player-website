@@ -1,13 +1,13 @@
-import SplitRow from "components/SplitRow"
-import { path } from "lib/helpers"
-import { sanityLoader } from "lib/imageLoader"
-import Image from "next/legacy/image"
-import Link from "next/link"
-import PortableText from "react-portable-text"
+import SplitRow from "components/SplitRow";
+import { path } from "lib/helpers";
+import { sanityLoader } from "lib/imageLoader";
+import Image from "next/legacy/image";
+import Link from "next/link";
+import PortableText from "react-portable-text";
 
 export default function ModuleImageList({ module }) {
-    const { title, items } = module
-    const IMAGE_ASPECT = 2.6
+    const { title, items } = module;
+    const IMAGE_ASPECT = 2.6;
 
     return (
         <div>
@@ -30,7 +30,8 @@ export default function ModuleImageList({ module }) {
                                             className="relative h-16 lg:h-32"
                                             style={{
                                                 aspectRatio: `${IMAGE_ASPECT}`,
-                                            }}>
+                                            }}
+                                        >
                                             <Image
                                                 layout="fill"
                                                 objectFit="contain"
@@ -66,7 +67,8 @@ export default function ModuleImageList({ module }) {
                                                     <a
                                                         href={url || href}
                                                         className="underline transition-all duration-300 hover:opacity-60"
-                                                        target="_blank">
+                                                        target="_blank"
+                                                    >
                                                         {children}
                                                     </a>
                                                 ),
@@ -78,7 +80,8 @@ export default function ModuleImageList({ module }) {
                                                         href={path(
                                                             slug.current,
                                                         )}
-                                                        className="underline">
+                                                        className="underline"
+                                                    >
                                                         {children}
                                                     </Link>
                                                 ),
@@ -86,10 +89,11 @@ export default function ModuleImageList({ module }) {
                                         />
                                     )}
                                 </div>
-                            }></SplitRow>
+                            }
+                        ></SplitRow>
                     </li>
                 ))}
             </ul>
         </div>
-    )
+    );
 }
