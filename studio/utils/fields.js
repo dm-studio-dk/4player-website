@@ -1,12 +1,12 @@
-import { defineField } from "sanity"
-import { slugify } from "./helpers"
+import { defineField } from "sanity";
+import { slugify } from "./helpers";
 
 export function slugField({
     resource = "",
     source = "title",
     fieldOptions = {},
 } = {}) {
-    const prefix = resource.length ? `${resource}/` : ""
+    const prefix = resource.length ? `${resource}/` : "";
 
     return defineField({
         name: "slug",
@@ -17,34 +17,34 @@ export function slugField({
         validation: (Rule) =>
             Rule.required().custom((slug) => {
                 if (typeof slug?.current === "undefined") {
-                    return true
+                    return true;
                 }
 
                 if (slug.current) {
-                    const current = slug.current
+                    const current = slug.current;
 
                     if (!current.startsWith(prefix)) {
-                        return `Slug must begin with "${prefix}". Click "Generate" to reset.`
+                        return `Slug must begin with "${prefix}". Click "Generate" to reset.`;
                     }
 
                     if (current.slice(prefix.length).split("").includes("/")) {
-                        return `Slug cannot have another "/" after "${prefix}"`
+                        return `Slug cannot have another "/" after "${prefix}"`;
                     }
 
                     if (current === prefix) {
-                        return `Slug cannot be empty`
+                        return `Slug cannot be empty`;
                     }
 
                     if (current.endsWith("/")) {
-                        return `Slug cannot end with "/"`
+                        return `Slug cannot end with "/"`;
                     }
 
                     if (current.startsWith("/")) {
-                        return `Slug cannot start with "/"`
+                        return `Slug cannot start with "/"`;
                     }
                 }
 
-                return true
+                return true;
             }),
         // inputComponent: SlugInput,
         options: {
@@ -53,24 +53,24 @@ export function slugField({
             basePath: `4player.dk`,
             maxLength: 30,
             isUnique(slug, options) {
-                const { document, getClient } = options
+                const { document, getClient } = options;
 
-                const id = document._id.replace(/^drafts\./, "")
+                const id = document._id.replace(/^drafts\./, "");
                 const params = {
                     draft: `drafts.${id}`,
                     published: id,
                     slug,
-                }
+                };
 
-                const query = `!defined(*[!(_id in [$draft, $published]) && slug.current == $slug][0]._id)`
+                const query = `!defined(*[!(_id in [$draft, $published]) && slug.current == $slug][0]._id)`;
 
                 return getClient({ apiVersion: "2025-01-01" }).fetch(
                     query,
                     params,
-                )
+                );
             },
         },
-    })
+    });
 }
 
 export function metaFields() {
@@ -99,7 +99,7 @@ export function metaFields() {
             type: "image",
             description: "The image to use for SEO",
         },
-    ]
+    ];
 }
 
 export const pageModules = [
@@ -111,7 +111,6 @@ export const pageModules = [
     { type: "moduleImageList" },
     { type: "moduleImageCaroussel" },
     { type: "modulePricingTable" },
-    { type: "moduleGuideList" },
     { type: "modulePersonList" },
     { type: "modulePodcastList" },
     { type: "moduleHistoryList" },
@@ -126,7 +125,7 @@ export const pageModules = [
     { type: "moduleBenefitsRequest" },
     { type: "moduleArticleList" },
     // { type: "moduleReusable" },
-]
+];
 
 export const linkableReferenceTypes = [
     { type: "page" },
@@ -134,4 +133,4 @@ export const linkableReferenceTypes = [
     { type: "guide" },
     { type: "theme" },
     { type: "initiative" },
-]
+];

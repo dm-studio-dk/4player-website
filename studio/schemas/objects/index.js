@@ -1,7 +1,6 @@
-import accordion from "./accordion"
-import ctaLink from "./ctaLink"
+import accordion from "./accordion";
+import ctaLink from "./ctaLink";
 import accordionItem from "./accordionItem";
-import moduleGuideList from "./modules/moduleGuideList";
 import navLink from "./navLink";
 // Blocks
 import blockQuote from "./blocks/blockQuote";
@@ -40,7 +39,6 @@ import moduleText from "./modules/moduleText";
 export default [
     // Global modules
     moduleImageList,
-    moduleGuideList,
     modulePersonList,
     moduleTeaserGuides,
     moduleTeaserArticles,
