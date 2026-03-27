@@ -1,5 +1,5 @@
-import { IoPeopleSharp } from "react-icons/io5"
-import { PERSON_DEPARTMENTS } from "../../../utils/const"
+import { IoPeopleSharp } from "react-icons/io5";
+import { PERSON_DEPARTMENTS } from "../../../utils/const";
 
 export default {
     name: "modulePersonList",
@@ -16,12 +16,12 @@ export default {
             name: "mode",
             title: "Mode",
             type: "string",
-            initialValue: "selected",
+            initialValue: "all",
             options: {
                 list: [
                     { title: "All", value: "all" },
-                    { title: "Department", value: "department" },
-                    { title: "Selected", value: "selected" },
+                    // { title: "Department", value: "department" },
+                    // { title: "Selected", value: "selected" },
                 ],
             },
         },
@@ -32,6 +32,7 @@ export default {
             options: {
                 list: [...PERSON_DEPARTMENTS],
             },
+            initialValue: PERSON_DEPARTMENTS[0].value,
         },
         {
             name: "people",
@@ -59,22 +60,22 @@ export default {
             person2: "people.2.name",
         },
         prepare({ title, department, mode, person0, person1, person2 }) {
-            let subtitle
+            let subtitle;
 
-            if (mode == "all") subtitle = "All employees"
+            if (mode == "all") subtitle = "All employees";
             if (mode == "selected")
                 subtitle = [person0, person1, person2]
                     .filter(Boolean)
-                    .join(", ")
+                    .join(", ");
             if (mode == "department")
                 subtitle = PERSON_DEPARTMENTS.find(
                     (d) => d.value == department,
-                ).title
+                ).title;
 
             return {
                 title: title || "Person List",
                 subtitle,
-            }
+            };
         },
     },
-}
+};
