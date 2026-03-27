@@ -1,4 +1,4 @@
-import { IoMenuSharp } from "react-icons/io5"
+import { IoMenuSharp } from "react-icons/io5";
 
 export default {
     name: "moduleForm",
@@ -21,14 +21,14 @@ export default {
             type: "string",
             options: {
                 list: [
-                    {
-                        title: "ProTreatment Signup",
-                        value: "protreatment",
-                    },
-                    {
-                        title: "Membership Interest",
-                        value: "membership",
-                    },
+                    // {
+                    //     title: "ProTreatment Signup",
+                    //     value: "protreatment",
+                    // },
+                    // {
+                    //     title: "Membership Interest",
+                    //     value: "membership",
+                    // },
                     {
                         title: "General Contact",
                         value: "general",
@@ -36,6 +36,8 @@ export default {
                 ],
             },
             validation: (Rule) => Rule.required(),
+            hidden: true,
+            initialValue: "general",
         },
         {
             name: "subject",
@@ -59,4 +61,4 @@ export default {
             hidden: ({ parent }) => parent.formType !== "general",
         },
     ],
-}
+};
