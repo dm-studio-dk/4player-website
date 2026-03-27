@@ -12,9 +12,14 @@ export default function Helmet({ page }) {
             ? page.modules[0]?.image
             : null);
 
+    const title = page.seoTitle || page.title;
+    const secondaryTitle = "4player";
+    const fullTitle =
+        secondaryTitle === title ? title : `${title} | ${secondaryTitle}`;
+
     return (
         <Head>
-            <title>{`${page.seoTitle || page.title} | 4Player`}</title>
+            <title>{fullTitle}</title>
             <meta
                 name="description"
                 content={
