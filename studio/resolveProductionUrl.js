@@ -1,5 +1,5 @@
 // Any random string, must match SANITY_PREVIEW_SECRET in the Next.js .env.local file
-const previewSecret = import.meta.env.SANITY_STUDIO_PREVIEW_SECRET
+const previewSecret = process.env.SANITY_STUDIO_PREVIEW_SECRET || ""
 
 // Replace `remoteUrl` with your deployed Next.js site
 const devUrl = `https://4player-website.netlify.app`

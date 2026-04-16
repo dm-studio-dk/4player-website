@@ -1,10 +1,13 @@
-import InitiativeAbout from "components/InitiativeAbout"
-import InitiativeProjectsList from "components/InitiativeProjectsList"
-import PageHero from "components/PageHero"
-import RelatedArticles from "components/RelatedArticles"
+import InitiativeAbout from "components/InitiativeAbout";
+import InitiativeProjectsList from "components/InitiativeProjectsList";
+import ModuleRenderer from "components/ModuleRenderer";
+import PageHero from "components/PageHero";
+import RelatedArticles from "components/RelatedArticles";
+import modules from "../../config/modules";
 
-export default function PageTemplate({ page = {} }) {
-    const { about, projects, relatedContent } = page
+export default function PageTemplate({ page = {}, preview }) {
+    console.log(page);
+    const { about, projects, relatedContent, modules: pageModules } = page;
 
     return (
         <>
@@ -16,15 +19,14 @@ export default function PageTemplate({ page = {} }) {
                 fullHeight={false}
             />
             <InitiativeAbout {...about} />
-            {/* {children ||
-                (pageModules && (
-                    <ModuleRenderer
-                        page={page}
-                        modules={pageModules}
-                        preview={preview}
-                        components={modules}
-                    />
-                ))} */}
+            {modules && (
+                <ModuleRenderer
+                    page={page}
+                    modules={pageModules}
+                    preview={preview}
+                    components={modules}
+                />
+            )}
             {(projects && projects.length && (
                 <InitiativeProjectsList projects={projects} />
             )) ||
@@ -34,5 +36,5 @@ export default function PageTemplate({ page = {} }) {
             )) ||
                 null}
         </>
-    )
+    );
 }
