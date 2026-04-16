@@ -1,7 +1,7 @@
-import InitiativeListItem from "components/InitiativeListItem"
+import InitiativeListItem from "components/InitiativeListItem";
 
 export default function ModuleTeaserInitatives({ module }) {
-    const { initiatives } = module
+    const { initiatives } = module;
     return (
         <div className="module-wrapper">
             <div className="container mx-auto">
@@ -14,7 +14,7 @@ export default function ModuleTeaserInitatives({ module }) {
                     </p>
                 </div>
             </div>
-            <div className="my-10 lg:my-20">
+            <div className="mt-20">
                 {initiatives?.map((initiative) => (
                     <InitiativeListItem
                         initiative={initiative}
@@ -23,5 +23,5 @@ export default function ModuleTeaserInitatives({ module }) {
                 ))}
             </div>
         </div>
-    )
+    );
 }
