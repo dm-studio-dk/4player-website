@@ -6,8 +6,8 @@ import RelatedArticles from "components/RelatedArticles";
 import modules from "../../config/modules";
 
 export default function PageTemplate({ page = {}, preview }) {
-    console.log(page);
     const { about, projects, relatedContent, modules: pageModules } = page;
+    console.log("about", about);
 
     return (
         <>
@@ -18,7 +18,7 @@ export default function PageTemplate({ page = {}, preview }) {
                 image={page.image}
                 fullHeight={false}
             />
-            <InitiativeAbout {...about} />
+            {about && <InitiativeAbout {...about} />}
             {modules && (
                 <ModuleRenderer
                     page={page}
