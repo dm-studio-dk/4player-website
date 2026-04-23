@@ -12,28 +12,28 @@ export default {
             title: "Title",
             type: "string",
         },
-        {
-            name: "mode",
-            title: "Mode",
-            type: "string",
-            initialValue: "all",
-            options: {
-                list: [
-                    { title: "All", value: "all" },
-                    // { title: "Department", value: "department" },
-                    // { title: "Selected", value: "selected" },
-                ],
-            },
-        },
-        {
-            name: "department",
-            type: "string",
-            hidden: ({ parent }) => parent.mode !== "department",
-            options: {
-                list: [...PERSON_DEPARTMENTS],
-            },
-            initialValue: PERSON_DEPARTMENTS[0].value,
-        },
+        // {
+        //     name: "mode",
+        //     title: "Mode",
+        //     type: "string",
+        //     initialValue: "all",
+        //     options: {
+        //         list: [
+        //             { title: "All", value: "all" },
+        //             // { title: "Department", value: "department" },
+        //             // { title: "Selected", value: "selected" },
+        //         ],
+        //     },
+        // },
+        // {
+        //     name: "department",
+        //     type: "string",
+        //     hidden: ({ parent }) => parent.mode !== "department",
+        //     options: {
+        //         list: [...PERSON_DEPARTMENTS],
+        //     },
+        //     initialValue: PERSON_DEPARTMENTS[0].value,
+        // },
         {
             name: "people",
             title: "People",
@@ -46,7 +46,7 @@ export default {
                     options: { disableNew: true },
                 },
             ],
-            hidden: ({ parent }) => parent.mode !== "selected",
+            // hidden: ({ parent }) => parent.mode !== "selected",
         },
     ],
     preview: {
