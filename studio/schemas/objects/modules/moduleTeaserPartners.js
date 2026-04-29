@@ -1,7 +1,7 @@
 import { IoLinkSharp } from "react-icons/io5"
 
 export default {
-    name: "moduleTeaserGuides",
+    name: "moduleTeaserPartners",
     title: "Link teaser",
     type: "object",
     icon: IoLinkSharp,
@@ -23,7 +23,7 @@ export default {
             type: "boolean",
         },
         {
-            name: "guides",
+            name: "partners",
             title: "Pages",
             type: "array",
             of: [
@@ -40,15 +40,15 @@ export default {
     ],
     preview: {
         select: {
-            guides: "guides",
+            partners: "partners",
         },
-        prepare({ guides = [] }) {
+        prepare({ partners = [] }) {
             return {
                 title: "Link teaser",
                 subtitle:
-                    guides.length === 1
+                    partners.length === 1
                         ? "1 page selected"
-                        : guides.length + " pages selected",
+                        : partners.length + " pages selected",
             }
         },
     },

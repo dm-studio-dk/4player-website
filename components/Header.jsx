@@ -10,7 +10,7 @@ export default function Header({ navigation, moduleContext }) {
     const invertedTop = moduleContext.startsWithHero
         ? moduleContext.modules[0].imageBackground
         : ["moduleHeroSlider"].includes(moduleContext.startsWith) ||
-          asPath.startsWith("/guide") ||
+          asPath.startsWith("/partner") ||
           asPath.startsWith("/initiativ")
 
     useEffect(() => {

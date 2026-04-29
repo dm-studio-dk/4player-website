@@ -41,13 +41,13 @@ export default {
             ],
         },
     ],
-    prepare({ mode, guides }) {
+    prepare({ mode, articles = [] }) {
         return {
             title: "Articles Teaser",
             subtitle:
                 mode == "latest"
                     ? "Latest 3 articles"
-                    : guides.length + " articles selected",
+                    : articles.length + " articles selected",
         }
     },
 }

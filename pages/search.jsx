@@ -53,7 +53,7 @@ export default function Page() {
                             inputClassName="mb-2"
                             type="text"
                             name="term"
-                            label="Søg efter artikler, guides, sider m.m."
+                            label="Søg efter artikler, partners, sider m.m."
                         />
                         <SubmitButton>Søg</SubmitButton>
                     </form>

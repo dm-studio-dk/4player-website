@@ -14,8 +14,8 @@ import {
 } from "../../utils/fields"
 
 export default {
-    name: "guide",
-    title: "Guide",
+    name: "partner",
+    title: "Partner",
     type: "document",
     groups: [
         {
@@ -35,7 +35,7 @@ export default {
             type: "string",
             group: "content",
         },
-        slugField({ resource: "guide", fieldOptions: { group: "content" } }),
+        slugField({ resource: "partner", fieldOptions: { group: "content" } }),
         {
             name: "subtitle",
             title: "Subtitle",

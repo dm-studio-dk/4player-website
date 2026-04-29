@@ -1,8 +1,8 @@
 import classNames from "classnames"
-import GuideTeaserCard from "../GuideTeaserCard"
+import PartnerTeaserCard from "../PartnerTeaserCard"
 
 export default function ModuleLinkTeaser({ module }) {
-    const { guides, hasBackground, subtitle } = module
+    const { partners, hasBackground, subtitle } = module
 
     return (
         <div
@@ -18,14 +18,14 @@ export default function ModuleLinkTeaser({ module }) {
                         {subtitle}
                     </p>
                 </div>
-                <div className="guides-container mt-20 gap-y-12 lg:gap-y-0">
-                    {guides &&
-                        guides
+                <div className="partners-container mt-20 gap-y-12 lg:gap-y-0">
+                    {partners &&
+                        partners
                             .filter(Boolean)
                             .map((page) => (
-                                <GuideTeaserCard
+                                <PartnerTeaserCard
                                     className="border-t border-black-almost border-opacity-10"
-                                    guide={page}
+                                    partner={page}
                                     key={page.slug.current}
                                 />
                             ))}

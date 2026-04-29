@@ -22,7 +22,7 @@ const contentTypes = [
         icon: IoNewspaperSharp,
     },
     {
-        name: "guide",
+        name: "partner",
         previewable: true,
         icon: IoHelpCircleSharp,
     },

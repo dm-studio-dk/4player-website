@@ -20,7 +20,7 @@ export default function SearchForm({ onResults }) {
                 <FormField
                     type="text"
                     name="term"
-                    placeholder="Søg efter artikler, guides, sider m.m."
+                    placeholder="Søg efter artikler, partners, sider m.m."
                 />
             </form>
         </div>

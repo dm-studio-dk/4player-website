@@ -34,7 +34,7 @@ export default {
     modulePodcastList: ModulePodcastList,
     moduleHistoryList: ModuleHistoryList,
     moduleArticleList: ModuleArticleList,
-    moduleTeaserGuides: ModuleLinkTeaser,
+    moduleTeaserPartners: ModuleLinkTeaser,
     modulePricingTable: ModulePricingTable,
     moduleTeaserPodcast: ModuleTeaserPodcast,
     moduleContactPerson: ModuleContactPerson,

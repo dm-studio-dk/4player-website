@@ -4,7 +4,7 @@ import header from "./header"
 import siteSettings from "./siteSettings"
 import article from "./article"
 import theme from "./theme"
-import guide from "./guide"
+import partner from "./partner"
 import footer from "./footer"
 import reusableModule from "./reusableModule"
 import initiative from "./initiative"
@@ -26,7 +26,7 @@ export default [
     person,
     article,
     theme,
-    guide,
+    partner,
     initiative,
     history,
 ]

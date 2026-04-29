@@ -1,11 +1,11 @@
-export default function GuideHero({ guide }) {
-    const { title, subtitle } = guide
+export default function PartnerHero({ partner }) {
+    const { title, subtitle } = partner
 
     return (
         <div className=" bg-black-full text-white pt-44 pb-20 mb-16 relative">
             <div className="absolute top-0 left-0 w-full h-full diagonal-bg-white opacity-[0.1666] -scale-x-100" />
             <div className="px-8 mx-auto text-center">
-                <p className="font-serif text-sm font-bold">Guide</p>
+                <p className="font-serif text-sm font-bold">Partner</p>
                 <h1 className="text-4xl lg:text-[110px] leading-tight mt-7 font-bold uppercase font-display text-green-light">
                     {title}
                 </h1>

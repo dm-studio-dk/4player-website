@@ -9,7 +9,7 @@ import ModulePersonList from "./modules/ModulePersonList"
 import ModuleTable from "./modules/ModuleTable"
 import ReferenceBlock from "./ReferenceBlock"
 
-export default function GuideRenderer({ body }) {
+export default function PartnerRenderer({ body }) {
     return (
         <div className="font-serif portable-text-wrapper">
             {body && (

@@ -30,7 +30,7 @@ import modulePromo from "./modules/modulePromo";
 import moduleQuote from "./modules/moduleQuote";
 import moduleTable from "./modules/moduleTable";
 import moduleTeaserArticles from "./modules/moduleTeaserArticles";
-import moduleTeaserGuides from "./modules/moduleTeaserGuides";
+import moduleTeaserPartners from "./modules/moduleTeaserPartners";
 import moduleTeaserInitatives from "./modules/moduleTeaserInitatives";
 import moduleTeaserPodcast from "./modules/moduleTeaserPodcast";
 import moduleTeaserPressrelease from "./modules/moduleTeaserPressrelease";
@@ -40,7 +40,7 @@ export default [
     // Global modules
     moduleImageList,
     modulePersonList,
-    moduleTeaserGuides,
+    moduleTeaserPartners,
     moduleTeaserArticles,
     moduleHero,
     moduleHeroSlider,

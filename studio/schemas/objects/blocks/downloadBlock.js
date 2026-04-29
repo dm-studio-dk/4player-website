@@ -29,7 +29,7 @@ export default {
             name: "small",
             title: "Small",
             type: "boolean",
-            hidden: ({ document }) => document._type != "guide",
+            hidden: ({ document }) => document._type != "partner",
             initialValue: false,
         },
     ],

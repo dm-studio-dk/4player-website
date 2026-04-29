@@ -19,7 +19,7 @@ export default function resolveProductionUrl(doc) {
 
         // Add prefixes based on document type
         if (doc._type === 'article') slug = `nyheder/${slug}`
-        if (doc._type === 'guide') slug = `guides/${slug}`
+        if (doc._type === 'partner') slug = `partners/${slug}`
         if (slug === '/') slug = ''
 
         previewUrl.pathname = `/api/preview`

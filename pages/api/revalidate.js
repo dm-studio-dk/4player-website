@@ -4,7 +4,7 @@ import { isValidSignature, SIGNATURE_HEADER_NAME } from '@sanity/webhook';
  * Premium Revalidation Route
  * 
  * This endpoint uses HMAC signatures to verify that requests are legitimately sent by Sanity.
- * It provides instant updates for Pages, Articles, and Guides.
+ * It provides instant updates for Pages, Articles, and Partners.
  */
 
 // Next.js requirement: Disable body parser to verify the raw body signature
@@ -47,8 +47,8 @@ export default async function handler(req, res) {
         case 'article':
           pathToRevalidate = `/nyheder/${slug.current}`;
           break;
-        case 'guide':
-          pathToRevalidate = `/guides/${slug.current}`;
+        case 'partner':
+          pathToRevalidate = `/partners/${slug.current}`;
           break;
         default:
           pathToRevalidate = `/${slug.current}`;

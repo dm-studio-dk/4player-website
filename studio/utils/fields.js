@@ -114,7 +114,7 @@ export const pageModules = [
     { type: "modulePersonList" },
     { type: "modulePodcastList" },
     { type: "moduleHistoryList" },
-    { type: "moduleTeaserGuides" },
+    { type: "moduleTeaserPartners" },
     { type: "moduleTeaserPodcast" },
     { type: "moduleTeaserArticles" },
     { type: "moduleTeaserPressrelease" },
@@ -130,7 +130,7 @@ export const pageModules = [
 export const linkableReferenceTypes = [
     { type: "page" },
     { type: "article" },
-    { type: "guide" },
+    { type: "partner" },
     { type: "theme" },
     { type: "initiative" },
 ];

@@ -67,7 +67,7 @@ export default {
         //                     to: [
         //                         { type: "article" },
         //                         { type: "page" },
-        //                         { type: "guide" },
+        //                         { type: "partner" },
         //                         { type: "initiative" },
         //                         { type: "theme" },
         //                     ],
