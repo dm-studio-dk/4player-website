@@ -23,6 +23,7 @@ import moduleHighlightNumbers from "./modules/moduleHighlightNumbers";
 import moduleHistoryList from "./modules/moduleHistoryList";
 import moduleImageCaroussel from "./modules/moduleImageCaroussel";
 import moduleImageList from "./modules/moduleImageList";
+import modulePartnerList from "./modules/modulePartnerList";
 import modulePersonList from "./modules/modulePersonList";
 import modulePodcastList from "./modules/modulePodcastList";
 import modulePricingTable from "./modules/modulePricingTable";
@@ -39,6 +40,7 @@ import moduleText from "./modules/moduleText";
 export default [
     // Global modules
     moduleImageList,
+    modulePartnerList,
     modulePersonList,
     moduleTeaserPartners,
     moduleTeaserArticles,

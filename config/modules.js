@@ -9,6 +9,7 @@ import ModuleHeroSlider from "../components/modules/ModuleHeroSlider";
 import ModulePersonList from "../components/modules/ModulePersonList";
 import ModulePodcastList from "../components/modules/ModulePodcastList";
 import ModuleHistoryList from "components/modules/ModuleHistoryList";
+import ModulePartnerList from "../components/modules/ModulePartnerList";
 import ModulePricingTable from "components/modules/ModulePricingTable";
 import ModuleLinkTeaser from "../components/modules/ModuleLinkTeaser";
 import ModuleContactPerson from "components/modules/ModuleContactPerson";
@@ -33,6 +34,7 @@ export default {
     modulePersonList: ModulePersonList,
     modulePodcastList: ModulePodcastList,
     moduleHistoryList: ModuleHistoryList,
+    modulePartnerList: ModulePartnerList,
     moduleArticleList: ModuleArticleList,
     moduleTeaserPartners: ModuleLinkTeaser,
     modulePricingTable: ModulePricingTable,

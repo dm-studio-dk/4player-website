@@ -111,6 +111,7 @@ export const pageModules = [
     { type: "moduleImageList" },
     { type: "moduleImageCaroussel" },
     { type: "modulePricingTable" },
+    { type: "modulePartnerList" },
     { type: "modulePersonList" },
     { type: "modulePodcastList" },
     { type: "moduleHistoryList" },

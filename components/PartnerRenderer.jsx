@@ -5,13 +5,14 @@ import Accordion from "./Accordion"
 import DownloadBlock from "./DownloadBlock"
 import Embed from "./Embed"
 import Factbox from "./Factbox"
+import ImageCaption from "./ImageCaption"
 import ModulePersonList from "./modules/ModulePersonList"
 import ModuleTable from "./modules/ModuleTable"
 import ReferenceBlock from "./ReferenceBlock"
 
 export default function PartnerRenderer({ body }) {
     return (
-        <div className="font-serif portable-text-wrapper">
+        <div className="font-serif portable-text-wrapper theme-green-light">
             {body && (
                 <PortableText
                     className="-mt-4 col-span-full lg:col-start-4 lg:col-span-6"
@@ -51,7 +52,15 @@ export default function PartnerRenderer({ body }) {
                         accordion: (props) => (
                             <Accordion className="my-10" {...props} />
                         ),
-                        highlight: (props) => <Factbox {...props} black />,
+                        highlight: (props) => <Factbox {...props} />,
+                        imageCaption: (props) => (
+                            <div className="container mx-auto site-grid">
+                                <ImageCaption
+                                    className="col-span-full lg:col-span-8 lg:col-start-3"
+                                    {...props}
+                                />
+                            </div>
+                        ),
                         referenceBlock: ReferenceBlock,
                         downloadBlock: DownloadBlock,
                         // Annotations
@@ -77,7 +86,12 @@ export default function PartnerRenderer({ body }) {
                             </a>
                         ),
                         moduleTable: (props) => (
-                            <ModuleTable {...props} module={props} small />
+                            <ModuleTable
+                                {...props}
+                                module={props}
+                                small
+                                headerClassName="bg-green-dark text-white"
+                            />
                         ),
                         modulePersonList: (props) => (
                             <ModulePersonList {...props} module={props} />

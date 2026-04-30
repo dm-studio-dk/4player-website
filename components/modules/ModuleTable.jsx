@@ -1,7 +1,7 @@
 import { classNames } from "lib/helpers"
 import PortableText from "react-portable-text"
 
-export default function ModuleTable({ module, small }) {
+export default function ModuleTable({ module, small, headerClassName }) {
     const { title, columns, notes } = module
     const largest = [...columns].sort(
         (ac, bc) => ac.rows.length - bc.rows.length,
@@ -21,7 +21,11 @@ export default function ModuleTable({ module, small }) {
                         )}>
                         <tr className="title text-center">
                             <th
-                                className="font-display bg-black-full text-green-light py-7 text-lg px-4"
+                                className={classNames(
+                                    "font-display py-7 text-lg px-4",
+                                    headerClassName ||
+                                        "bg-black-full text-green-light",
+                                )}
                                 colSpan={columns.length}>
                                 {title}
                             </th>

@@ -1,7 +1,6 @@
 import ContactPersonCard from "../ContactPersonCard"
 import PartnerHero from "../PartnerHero"
 import PartnerRenderer from "../PartnerRenderer"
-import MorePartners from "../MorePartners"
 
 export default function PartnerTemplate({ page, preview, children }) {
     return (
@@ -16,7 +15,6 @@ export default function PartnerTemplate({ page, preview, children }) {
             ) : (
                 <div className="spacer pb-40" />
             )}
-            <MorePartners partners={page.relatedPartners} />
         </>
     )
 }
