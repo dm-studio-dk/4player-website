@@ -3,7 +3,6 @@ export default function PartnerHero({ partner }) {
 
     return (
         <div className="bg-green-dark text-white pt-44 pb-20 mb-16 relative">
-            <div className="absolute top-0 left-0 w-full h-full diagonal-bg-white opacity-[0.1666] -scale-x-100" />
             <div className="px-8 mx-auto text-center">
                 <h1 className="text-4xl lg:text-[110px] leading-tight font-bold uppercase font-display text-white">
                     {title}

@@ -1,10 +1,10 @@
-import { IoHelpCircleSharp } from "react-icons/io5"
+import { IoBusinessSharp } from "react-icons/io5"
 
 export default {
     name: "modulePartnerList",
     title: "Partner list",
     type: "object",
-    icon: IoHelpCircleSharp,
+    icon: IoBusinessSharp,
     fields: [
         {
             name: "title",

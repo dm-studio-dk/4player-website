@@ -2,7 +2,7 @@ import {
     IoPersonSharp,
     IoNewspaperSharp,
     IoPricetagSharp,
-    IoHelpCircleSharp,
+    IoBusinessSharp,
     IoStarSharp,
     IoTimerSharp,
 } from "react-icons/io5"
@@ -24,7 +24,7 @@ const contentTypes = [
     {
         name: "partner",
         previewable: true,
-        icon: IoHelpCircleSharp,
+        icon: IoBusinessSharp,
     },
     {
         name: "initiative",
