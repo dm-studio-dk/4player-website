@@ -1,9 +1,16 @@
 import InitiativeListItem from "components/InitiativeListItem";
+import classNames from "classnames";
 
-export default function ModuleTeaserInitatives({ module }) {
+export default function ModuleTeaserInitatives({ module, previousModule }) {
     const { initiatives } = module;
+    const followsPromo = previousModule?._type === "modulePromo";
+
     return (
-        <div className="module-wrapper">
+        <div
+            className={classNames("pb-20 lg:pb-32", {
+                "pt-20 lg:pt-32": !followsPromo,
+            })}
+        >
             <div className="container mx-auto">
                 <div className="top-section site-grid">
                     <h3 className="text-center uppercase font-display text-5xl lg:text-[80px] col-span-full">

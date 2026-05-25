@@ -2,13 +2,19 @@ import BlockQuote from "components/BlockQuote"
 import DownloadBlock from "components/DownloadBlock"
 import Embed from "components/Embed"
 import Factbox from "components/Factbox"
+import classNames from "classnames"
 import Link from "next/link"
 import PortableText from "react-portable-text"
 import { fileUrl, path } from "../../lib/helpers"
 
-export default function ModuleText({ module }) {
+export default function ModuleText({ module, previousModule }) {
+    const followsPromo = previousModule?._type === "modulePromo"
+
     return (
-        <div className="my-20 lg:my-32 theme-green-light">
+        <div
+            className={classNames("theme-green-light mb-20 lg:mb-32", {
+                "mt-20 lg:mt-32": !followsPromo,
+            })}>
             {module.title && (
                 <div className="container mx-auto title-container site-grid">
                     <h2 className="text-center uppercase font-display text-4xl leading-[1.1] lg:text-[80px] col-span-full lg:col-span-8 lg:col-start-3 ">
