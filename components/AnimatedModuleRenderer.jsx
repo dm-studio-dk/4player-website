@@ -9,7 +9,7 @@ export default function AnimatedModuleRenderer({
     return (
         <Reorder.Group axis="y" values={modules}>
             <AnimatePresence>
-                {modules?.map((module) => {
+                {modules?.map((module, index) => {
                     const Component =
                         components[module._type] || components["moduleNotFound"]
 
@@ -19,7 +19,10 @@ export default function AnimatedModuleRenderer({
                             id={module._key}
                             key={module._key}>
                             <motion.div>
-                                <Component module={module} />
+                                <Component
+                                    module={module}
+                                    previousModule={modules[index - 1]}
+                                />
                             </motion.div>
                         </Reorder.Item>
                     )

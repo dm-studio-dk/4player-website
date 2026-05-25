@@ -12,7 +12,7 @@ export default function ModuleRenderer({
 
     return (
         <>
-            {modules?.map((module) => {
+            {modules?.map((module, index) => {
                 const Component =
                     components[module._type] || components["moduleNotFound"]
 
@@ -20,7 +20,11 @@ export default function ModuleRenderer({
                     <Sentry.ErrorBoundary
                         fallback={ErrorFallback(module)}
                         key={module._key}>
-                        <Component module={module} page={page} />
+                        <Component
+                            module={module}
+                            page={page}
+                            previousModule={modules[index - 1]}
+                        />
                     </Sentry.ErrorBoundary>
                 )
             })}
