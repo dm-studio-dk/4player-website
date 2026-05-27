@@ -11,7 +11,10 @@ export default function PartnerTemplate({ page, preview, children }) {
                     <PartnerRenderer body={page.body} preview={preview} />
                 ))}
             {page.contact?.person ? (
-                <ContactPersonCard {...page.contact} className="mt-16" />
+                <ContactPersonCard
+                    {...page.contact}
+                    className="mt-16 mb-20 lg:mb-32"
+                />
             ) : (
                 <div className="spacer pb-40" />
             )}

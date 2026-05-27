@@ -4,6 +4,11 @@ import Link from "next/link"
 import PortableText from "react-portable-text"
 import { classNames, path } from "../lib/helpers"
 
+const externalLinkProps = (url) =>
+    /^https?:\/\//i.test(url)
+        ? { target: "_blank", rel: "noopener noreferrer" }
+        : {}
+
 export default function Factbox({ title, body, image, black = false }) {
     return (
         <div className="container w-full mx-auto mt-12 site-grid">
@@ -27,11 +32,11 @@ export default function Factbox({ title, body, image, black = false }) {
                         content={body}
                         serializers={{
                             // Annotations
-                            link: ({ children, href }) => (
+                            link: ({ children, url }) => (
                                 <a
-                                    href={href}
+                                    href={url}
                                     className="underline text-green-dark"
-                                    target="_blank">
+                                    {...externalLinkProps(url)}>
                                     {children}
                                 </a>
                             ),

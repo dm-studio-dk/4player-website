@@ -10,6 +10,11 @@ import ModulePersonList from "./modules/ModulePersonList"
 import ModuleTable from "./modules/ModuleTable"
 import ReferenceBlock from "./ReferenceBlock"
 
+const externalLinkProps = (url) =>
+    /^https?:\/\//i.test(url)
+        ? { target: "_blank", rel: "noopener noreferrer" }
+        : {}
+
 export default function PartnerRenderer({ body }) {
     return (
         <div className="font-serif portable-text-wrapper theme-green-light">
@@ -65,7 +70,10 @@ export default function PartnerRenderer({ body }) {
                         downloadBlock: DownloadBlock,
                         // Annotations
                         link: ({ children, url }) => (
-                            <a href={url} className="underline" target="_blank">
+                            <a
+                                href={url}
+                                className="underline"
+                                {...externalLinkProps(url)}>
                                 {children}
                             </a>
                         ),
