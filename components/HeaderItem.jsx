@@ -46,7 +46,7 @@ const HeaderItem = ({ item, mobile, onSubmenuShow, onSubmenuHide }) => {
                 className={classNames(
                     "inline-block transition-all duration-300",
                     {
-                        "bg-green-light text-green-dark px-4 py-2 hover:opacity-80":
+                        "bg-green-light text-black-full px-4 py-2 hover:opacity-80":
                             item.isButton,
                         "mix-blend-difference hover:opacity-60": !item.isButton,
                     },
