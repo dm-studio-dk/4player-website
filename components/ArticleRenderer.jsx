@@ -1,6 +1,6 @@
 import Link from "next/link"
 import PortableText from "react-portable-text"
-import { path } from "../lib/helpers"
+import { externalLinkProps, path } from "../lib/helpers"
 import BlockQuote from "./BlockQuote"
 import Embed from "./Embed"
 import Factbox from "./Factbox"
@@ -49,7 +49,7 @@ export default function ArticleRenderer({ theme, body }) {
                         <a
                             href={url || href}
                             className="underline"
-                            target="_blank">
+                            {...externalLinkProps(url || href)}>
                             {children}
                         </a>
                     ),

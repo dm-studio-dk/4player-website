@@ -1,5 +1,7 @@
 import slugger from "slugify"
 
+export const LINK_URL_SCHEMES = ["http", "https", "mailto", "tel"]
+
 export function slugify({ prefix = "" } = {}) {
     return (input) => {
         const slug = slugger(input, { lower: true, trim: true, strict: true })

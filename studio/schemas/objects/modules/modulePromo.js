@@ -1,5 +1,6 @@
 import { IoStarSharp } from "react-icons/io5"
 import { linkableReferenceTypes } from "../../../utils/fields"
+import { LINK_URL_SCHEMES } from "../../../utils/helpers"
 
 export default {
     name: "modulePromo",
@@ -68,6 +69,7 @@ export default {
             title: "URL",
             type: "url",
             hidden: ({ parent }) => parent.linkType !== "external",
+            validation: (Rule) => Rule.uri({ scheme: LINK_URL_SCHEMES }),
         },
         {
             name: "imageBackground",

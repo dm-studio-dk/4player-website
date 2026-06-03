@@ -1,5 +1,6 @@
 import { IoLinkSharp } from "react-icons/io5"
 import { linkableReferenceTypes } from "../../utils/fields"
+import { LINK_URL_SCHEMES } from "../../utils/helpers"
 
 export default {
     name: "ctaLink",
@@ -58,7 +59,7 @@ export default {
                         return "Enter a URL"
                     }
                     return true
-                }),
+                }).uri({ scheme: LINK_URL_SCHEMES }),
         },
     ],
     preview: {

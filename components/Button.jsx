@@ -1,7 +1,8 @@
 import Link from "next/link"
+import { externalLinkProps } from "../lib/helpers"
 
 export default function Button({
-    onClick = () => {},
+    onClick,
     href,
     internal,
     children,
@@ -24,7 +25,7 @@ export default function Button({
             return (
                 <a
                     href={href}
-                    target="_blank"
+                    {...externalLinkProps(href)}
                     className="font-display inline-flex items-center group">
                     {children}
                     <Arrow></Arrow>
@@ -33,13 +34,13 @@ export default function Button({
         }
     }
 
-    return (
+        return (
         <button
             onClick={onClick}
             className="font-display inline-flex items-center group">
-            {children}
-            <Arrow></Arrow>
-        </button>
+                {children}
+                <Arrow></Arrow>
+            </button>
     )
 }
 

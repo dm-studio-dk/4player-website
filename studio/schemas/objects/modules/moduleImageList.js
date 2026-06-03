@@ -5,6 +5,7 @@ import {
     IoShareSharp,
 } from "react-icons/io5"
 import { linkableReferenceTypes } from "./../../../utils/fields"
+import { LINK_URL_SCHEMES } from "./../../../utils/helpers"
 
 export default {
     name: "moduleImageList",
@@ -73,6 +74,10 @@ export default {
                                                     {
                                                         name: "url",
                                                         type: "url",
+                                                        validation: (Rule) =>
+                                                            Rule.uri({
+                                                                scheme: LINK_URL_SCHEMES,
+                                                            }),
                                                     },
                                                 ],
                                             },

@@ -1,6 +1,6 @@
 import SplitRow from "components/SplitRow"
 import Button from "components/Button"
-import { path } from "lib/helpers"
+import { externalLinkProps, path } from "lib/helpers"
 import { sanityLoader } from "lib/imageLoader"
 import Image from "next/legacy/image"
 import Link from "next/link"
@@ -68,7 +68,9 @@ export default function ModuleImageList({ module }) {
                                                     <a
                                                         href={url || href}
                                                         className="underline transition-all duration-300 hover:opacity-60"
-                                                        target="_blank"
+                                                        {...externalLinkProps(
+                                                            url || href,
+                                                        )}
                                                     >
                                                         {children}
                                                     </a>
