@@ -1,6 +1,6 @@
 import Link from "next/link"
 import PortableText from "react-portable-text"
-import { fileUrl, path } from "../lib/helpers"
+import { externalLinkProps, fileUrl, path } from "../lib/helpers"
 import Accordion from "./Accordion"
 import DownloadBlock from "./DownloadBlock"
 import Embed from "./Embed"
@@ -9,11 +9,6 @@ import ImageCaption from "./ImageCaption"
 import ModulePersonList from "./modules/ModulePersonList"
 import ModuleTable from "./modules/ModuleTable"
 import ReferenceBlock from "./ReferenceBlock"
-
-const externalLinkProps = (url) =>
-    /^https?:\/\//i.test(url)
-        ? { target: "_blank", rel: "noopener noreferrer" }
-        : {}
 
 export default function PartnerRenderer({ body }) {
     return (

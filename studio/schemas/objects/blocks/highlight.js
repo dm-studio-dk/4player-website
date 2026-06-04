@@ -1,5 +1,6 @@
 import { IoLinkSharp, IoShareSharp } from "react-icons/io5"
 import { linkableReferenceTypes } from "../../../utils/fields"
+import { LINK_URL_SCHEMES } from "../../../utils/helpers"
 
 export default {
     name: "highlight",
@@ -33,12 +34,7 @@ export default {
                                         type: "url",
                                         validation: (Rule) =>
                                             Rule.uri({
-                                                scheme: [
-                                                    "http",
-                                                    "https",
-                                                    "mailto",
-                                                    "tel",
-                                                ],
+                                                scheme: LINK_URL_SCHEMES,
                                             }),
                                     },
                                 ],

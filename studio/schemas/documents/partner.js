@@ -12,6 +12,7 @@ import {
     metaFields,
     slugField,
 } from "../../utils/fields"
+import { LINK_URL_SCHEMES } from "../../utils/helpers"
 
 export default {
     name: "partner",
@@ -90,12 +91,7 @@ export default {
                                         type: "url",
                                         validation: (Rule) =>
                                             Rule.uri({
-                                                scheme: [
-                                                    "http",
-                                                    "https",
-                                                    "mailto",
-                                                    "tel",
-                                                ],
+                                                scheme: LINK_URL_SCHEMES,
                                             }),
                                     },
                                 ],

@@ -5,7 +5,7 @@ import Factbox from "components/Factbox"
 import classNames from "classnames"
 import Link from "next/link"
 import PortableText from "react-portable-text"
-import { fileUrl, path } from "../../lib/helpers"
+import { externalLinkProps, fileUrl, path } from "../../lib/helpers"
 
 export default function ModuleText({ module, previousModule }) {
     const followsPromo = previousModule?._type === "modulePromo"
@@ -51,7 +51,10 @@ export default function ModuleText({ module, previousModule }) {
                         ),
                         // Annotations
                         link: ({ children, url }) => (
-                            <a href={url} className="underline" target="_blank">
+                            <a
+                                href={url}
+                                className="underline"
+                                {...externalLinkProps(url)}>
                                 {children}
                             </a>
                         ),

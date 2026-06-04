@@ -2,12 +2,7 @@ import { sanityLoader } from "lib/imageLoader"
 import Image from "next/legacy/image"
 import Link from "next/link"
 import PortableText from "react-portable-text"
-import { classNames, path } from "../lib/helpers"
-
-const externalLinkProps = (url) =>
-    /^https?:\/\//i.test(url)
-        ? { target: "_blank", rel: "noopener noreferrer" }
-        : {}
+import { classNames, externalLinkProps, path } from "../lib/helpers"
 
 export default function Factbox({ title, body, image, black = false }) {
     return (

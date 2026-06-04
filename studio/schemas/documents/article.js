@@ -12,7 +12,11 @@ import {
     metaFields,
     slugField,
 } from "../../utils/fields"
-import { capitalize, randomIntFromInterval } from "../../utils/helpers"
+import {
+    capitalize,
+    LINK_URL_SCHEMES,
+    randomIntFromInterval,
+} from "../../utils/helpers"
 
 export default {
     name: "article",
@@ -247,6 +251,10 @@ export default {
                                     {
                                         name: "url",
                                         type: "url",
+                                        validation: (Rule) =>
+                                            Rule.uri({
+                                                scheme: LINK_URL_SCHEMES,
+                                            }),
                                     },
                                 ],
                             },

@@ -6,7 +6,7 @@ import {
     IoShareSharp,
     IoTextSharp,
 } from "react-icons/io5"
-import { blocksToPlainText } from "../../../utils/helpers"
+import { blocksToPlainText, LINK_URL_SCHEMES } from "../../../utils/helpers"
 import { linkableReferenceTypes } from "../../../utils/fields"
 
 export default {
@@ -60,7 +60,10 @@ export default {
                                     {
                                         name: "url",
                                         type: "url",
-                                        validation: (Rule) => Rule.required(),
+                                        validation: (Rule) =>
+                                            Rule.required().uri({
+                                                scheme: LINK_URL_SCHEMES,
+                                            }),
                                     },
                                 ],
                             },
