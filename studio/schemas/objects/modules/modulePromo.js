@@ -12,7 +12,7 @@ export default {
             name: "title",
             title: "Title",
             type: "string",
-            validation: (Rule) => Rule.required(),
+            description: "Optional when the image is used as the heading.",
         },
         {
             name: "content",

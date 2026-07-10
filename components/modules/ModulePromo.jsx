@@ -27,6 +27,9 @@ export function PromoFull({
             ? path(reference?.slug?.current) || ""
             : url || ""
     const isInternal = linkType == "internal"
+    const hasContent = Array.isArray(content)
+        ? content.length > 0
+        : Boolean(content)
 
     return (
         <div className="container pb-20 mx-auto lg:pb-32">
@@ -41,7 +44,7 @@ export function PromoFull({
                         className="absolute inset-0"
                         aria-label={buttonLabel || title}>
                         <Image
-                            alt={title}
+                            alt={title || ""}
                             className={classNames(
                                 "block w-full transition-all duration-500 ease-out",
                                 { "group-hover:scale-110": href },
@@ -55,20 +58,28 @@ export function PromoFull({
                 )}
                 <div className="pointer-events-none gradient-overlay"></div>
                 <div className="relative z-10 px-6 text-center text-white inner-content w-max">
-                    <h2 className="text-4xl leading-[1.1] lg:text-[96px] font-bold font-display">
-                        <AdaptableLink href={href} internal={isInternal}>
-                            {title}
-                        </AdaptableLink>
-                    </h2>
-                    {content && (
+                    {title && (
+                        <h2 className="text-4xl leading-[1.1] lg:text-[96px] font-bold font-display">
+                            <AdaptableLink href={href} internal={isInternal}>
+                                {title}
+                            </AdaptableLink>
+                        </h2>
+                    )}
+                    {hasContent && (
                         <PortableText
-                            className="space-y-10 mt-4 lg:mt-5 max-w-[60ch] mx-auto text-lg leading-[1.4]"
+                            className={classNames(
+                                "space-y-10 max-w-[60ch] mx-auto text-lg leading-[1.4]",
+                                { "mt-4 lg:mt-5": title },
+                            )}
                             content={content}
                             serializers={promoContentSerializers}
                         />
                     )}
                     {buttonLabel && (
-                        <div className="mt-6 cta">
+                        <div
+                            className={classNames("cta", {
+                                "mt-6": title || hasContent,
+                            })}>
                             <Button
                                 arrow="right"
                                 inverted
@@ -100,6 +111,10 @@ export function PromoSplit({
             ? path(reference?.slug?.current) || ""
             : url || ""
     const isInternal = linkType == "internal"
+    const hasContent = Array.isArray(content)
+        ? content.length > 0
+        : Boolean(content)
+    const hasHeading = Boolean(label || title)
 
     return (
         <div>
@@ -114,7 +129,7 @@ export function PromoSplit({
                         aria-label={buttonLabel || title}>
                         {image?.asset && (
                             <Image
-                                alt={title}
+                                alt={title || ""}
                                 className={classNames(
                                     "block w-full transition-all duration-500 ease-out",
                                     { "group-hover:scale-110": href },
@@ -138,26 +153,46 @@ export function PromoSplit({
                                 "lg:-order-1": orientation == "right",
                             },
                         )}>
-                        <p className="mb-3 text-base font-display">{label}</p>
-                        <h2 className="text-3xl leading-[1.1] lg:text-4xl font-bold font-display">
-                            <AdaptableLink href={href} internal={isInternal}>
-                                {title}
-                            </AdaptableLink>
-                        </h2>
-                        {typeof content == "string" && (
-                            <p className="mt-4 lg:mt-5 lg:max-w-[46ch] mx-auto text-lg leading-[1.4]">
+                        {label && (
+                            <p className="text-base font-display">{label}</p>
+                        )}
+                        {title && (
+                            <h2
+                                className={classNames(
+                                    "text-3xl leading-[1.1] lg:text-4xl font-bold font-display",
+                                    { "mt-3": label },
+                                )}>
+                                <AdaptableLink
+                                    href={href}
+                                    internal={isInternal}>
+                                    {title}
+                                </AdaptableLink>
+                            </h2>
+                        )}
+                        {hasContent && typeof content == "string" && (
+                            <p
+                                className={classNames(
+                                    "lg:max-w-[46ch] mx-auto text-lg leading-[1.4]",
+                                    { "mt-4 lg:mt-5": hasHeading },
+                                )}>
                                 {content}
                             </p>
                         )}
-                        {content && typeof content == "object" && (
+                        {hasContent && typeof content == "object" && (
                             <PortableText
-                                className="space-y-10 mt-4 lg:mt-5 lg:max-w-[46ch] mx-auto text-lg leading-[1.4]"
+                                className={classNames(
+                                    "space-y-10 lg:max-w-[46ch] mx-auto text-lg leading-[1.4]",
+                                    { "mt-4 lg:mt-5": hasHeading },
+                                )}
                                 content={content}
                                 serializers={promoContentSerializers}
                             />
                         )}
                         {buttonLabel && (
-                            <div className="mt-6 cta">
+                            <div
+                                className={classNames("cta", {
+                                    "mt-6": hasHeading || hasContent,
+                                })}>
                                 <Button
                                     arrow="right"
                                     href={href}
