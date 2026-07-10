@@ -7,8 +7,8 @@ export default function ModuleTeaserInitatives({ module, previousModule }) {
 
     return (
         <div
-            className={classNames("pb-20 lg:pb-32", {
-                "pt-20 lg:pt-32": !followsPromo,
+            className={classNames("mb-20 lg:mb-32", {
+                "mt-20 lg:mt-32": !followsPromo,
             })}
         >
             <div className="container mx-auto">
